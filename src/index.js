@@ -7,9 +7,10 @@ import HorizontalBar from './HorizontalBar.svelte';
 import Polar from './Polar.svelte';
 import Bubble from './Bubble.svelte';
 import Scatter from './Scatter.svelte';
+import Base from './Base.svelte';
 
 export {
-
+  Base,
   Line,
   Radar,
   Doughnut,
@@ -19,6 +20,5 @@ export {
   Scatter,
   Bubble,
   Polar
-
 }
 
