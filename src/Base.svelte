@@ -2,7 +2,7 @@
   import {onMount, afterUpdate, onDestroy} from 'svelte';
   import {clean} from './utils';
 
-  const Chart = require("chart.js");
+  import Chart from 'chart.js';
 
   //  Expected data
   export let data = {
