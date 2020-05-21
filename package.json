@@ -1,0 +1,31 @@
+{
+  "name": "svelte-chartsjs",
+  "version": "1.0.0",
+  "main": "dist/svelte-chartsjs.js",
+  "module": "dist/svelte-chartsjs.es.js",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "keywords": [
+    "svelte",
+    "MDBootstrap"
+  ],
+  "scripts": {
+    "dist": "rollup -c",
+    "dev": "rollup -c -w",
+    "prepublishOnly": "npm run dist"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "11.0.2",
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "rollup": "^1.20.0",
+    "rollup-plugin-livereload": "^1.0.0",
+    "rollup-plugin-svelte": "^5.0.3",
+    "rollup-plugin-terser": "^5.1.2",
+    "svelte": "^3.0.0"
+  },
+  "dependencies": {
+    "chart.js": "^2.9.3"
+  }
+}
