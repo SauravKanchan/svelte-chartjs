@@ -1,6 +1,6 @@
 {
   "name": "svelte-chartsjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "module": "lib/index.mjs",
   "main": "lib/index.js",
   "svelte": "src/index.js",
