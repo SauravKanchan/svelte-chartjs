@@ -3,8 +3,6 @@
   import {clean} from './utils';
 
   const Chart = require("chart.js");
-  export let height=150;
-  export let width=300;
 
   //  Expected data
   export let data = {

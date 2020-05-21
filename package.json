@@ -1,11 +1,12 @@
 {
   "name": "svelte-chartsjs",
   "version": "1.0.0",
-  "main": "dist/svelte-chartsjs.js",
-  "module": "dist/svelte-chartsjs.es.js",
+  "module": "lib/index.mjs",
+  "main": "lib/index.js",
+  "svelte": "src/index.js",
   "files": [
-    "dist",
-    "src"
+    "src",
+    "lib"
   ],
   "keywords": [
     "svelte",
