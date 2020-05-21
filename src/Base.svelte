@@ -3,8 +3,8 @@
   import {clean} from './utils';
 
   const Chart = require("chart.js");
-  export let height=276;
-  export let width=533;
+  export let height=150;
+  export let width=300;
 
   //  Expected data
   export let data = {
@@ -34,4 +34,4 @@
   });
 </script>
 
-<canvas bind:this={chartRef} style="display: block; height: {height}px; width: {width}px;" {...props}></canvas>
+<canvas bind:this={chartRef} {...props}></canvas>
