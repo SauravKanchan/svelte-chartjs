@@ -1,4 +1,5 @@
 # svelte-chartjs
+[![npm version](https://badge.fury.io/js/svelte-chartjs.svg)](https://badge.fury.io/js/svelte-chartjs)
 
 Svelte wrapper for [chart.js](https://www.chartjs.org/) Open for PRs and contributions!
 
