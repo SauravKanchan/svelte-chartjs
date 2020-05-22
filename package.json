@@ -4,6 +4,9 @@
   "module": "lib/index.mjs",
   "main": "lib/index.js",
   "svelte": "src/index.js",
+  "homepage": "https://saurav.tech/mdbsvelte/?path=/story/charts--examples",
+  "author": "Saurav Kanchan",
+  "license": "MIT",
   "files": [
     "src",
     "lib"
