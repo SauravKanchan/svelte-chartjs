@@ -1,5 +1,6 @@
 # svelte-chartjs
 [![npm version](https://badge.fury.io/js/svelte-chartjs.svg)](https://badge.fury.io/js/svelte-chartjs)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FSauravKanchan%2Fsvelte-chartjs.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FSauravKanchan%2Fsvelte-chartjs?ref=badge_shield)
 
 Svelte wrapper for [chart.js](https://www.chartjs.org/) Open for PRs and contributions!
 
@@ -28,3 +29,7 @@ In order for Chart.js to obey the custom size you need to set `maintainAspectRat
   options={{ maintainAspectRatio: false }}
 />
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FSauravKanchan%2Fsvelte-chartjs.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FSauravKanchan%2Fsvelte-chartjs?ref=badge_large)
