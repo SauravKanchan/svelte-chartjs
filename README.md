@@ -1,4 +1,3 @@
-# svelte-chartsjs
+# svelte-chartjs
 
-Svelte wrapper for [charts.js](https://www.chartjs.org/) Open for PRs and contributions!
-
+Svelte wrapper for [chart.js](https://www.chartjs.org/) Open for PRs and contributions!
