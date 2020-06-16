@@ -15,14 +15,16 @@
   };
   export let type = 'line';
   export let options = {};
+  export let plugins = {};
   let chart = null;
   let chartRef;
-  let props = clean($$props, ["data", "type", "options"]);
+  let props = clean($$props, ["data", "type", "options","plugins"]);
   onMount(() => {
     chart = new Chart(chartRef, {
       type,
       data,
-      options
+      options,
+      plugins
     });
   });
   afterUpdate(() => chart.update(data));
