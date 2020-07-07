@@ -18,7 +18,7 @@
   export let plugins = {};
   let chart = null;
   let chartRef;
-  let props = clean($$props, ["data", "type", "options","plugins"]);
+  let props = clean($$props, ["data", "type", "options", "plugins"]);
   onMount(() => {
     chart = new Chart(chartRef, {
       type,
@@ -27,7 +27,13 @@
       plugins
     });
   });
-  afterUpdate(() => chart.update(data));
+  afterUpdate(() => {
+    chart.data = data;
+    chart.type = type;
+    chart.options = options;
+    chart.plugins = plugins;
+    chart.update()
+  });
 
   onDestroy(() => {
     chart = null;
