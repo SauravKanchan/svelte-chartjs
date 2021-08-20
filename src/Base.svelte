@@ -1,30 +1,28 @@
 <script>
   import {onMount, afterUpdate, onDestroy} from 'svelte';
   import {clean} from './utils';
-
-  import Chart from 'chart.js';
+  import {Chart, registerables} from 'chart.js';
+  Chart.register(...registerables);
 
   //  Expected data
   export let data = {
     labels: [],
     datasets: [
-      {values: []}
+      {data: []}
     ],
     yMarkers: {},
     yRegions: [],
   };
   export let type = 'line';
   export let options = {};
-  export let plugins = {};
   let chart = null;
   let chartRef;
-  let props = clean($$props, ["data", "type", "options", "plugins"]);
+  let props = clean($$props, ["data", "type", "options"]);
   onMount(() => {
     chart = new Chart(chartRef, {
       type,
       data,
-      options,
-      plugins
+      options
     });
   });
   afterUpdate(() => {
@@ -33,7 +31,6 @@
     chart.data = data;
     chart.type = type;
     chart.options = options;
-    chart.plugins = plugins;
     chart.update()
   });
 
