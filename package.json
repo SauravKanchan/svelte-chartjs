@@ -37,6 +37,6 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
-    "chart.js": "^2.9.4"
+    "chart.js": "^3.5.0"
   }
 }
