@@ -1,7 +1,7 @@
 <script>
   import {onMount, afterUpdate, onDestroy} from 'svelte';
   import {clean} from './utils';
-  import {Chart, registerables} from 'chart.js';
+  import {Chart, registerables} from 'chart.js/dist/chart.esm';
   Chart.register(...registerables);
 
   //  Expected data
