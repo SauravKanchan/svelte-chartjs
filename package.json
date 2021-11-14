@@ -1,10 +1,11 @@
 {
-  "name": "@michmich112/svelte-chartjs",
+  "name": "svelte-chartjs",
   "version": "1.1.1",
   "module": "lib/index.mjs",
   "main": "lib/index.js",
   "types": "types/index.d.ts",
   "svelte": "src/index.js",
+  "homepage": "https://saurav.tech/mdbsvelte/?path=/story/charts--examples",
   "author": "Saurav Kanchan",
   "license": "MIT",
   "files": [
@@ -18,10 +19,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/michmich112/svelte-chartjs.git"
+    "url": "git+https://github.com/SauravKanchan/svelte-chartjs.git"
   },
   "bugs": {
-    "url": "https://github.com/michmich112/svelte-chartjs"
+    "url": "https://github.com/SauravKanchan/svelte-chartjs"
   },
   "scripts": {
     "dist": "rollup -c",
