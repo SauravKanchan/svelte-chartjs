@@ -15,7 +15,7 @@ npm i svelte-chartjs
 ### Usage
 ```svelte
 <script>
-  import Line from "svelte-chartjs/src/Line.svelte"
+  import { Line } from "svelte-chartjs"
 </script>
 <Line data={...} />
 ```
