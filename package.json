@@ -1,14 +1,16 @@
 {
   "name": "svelte-chartjs",
-  "version": "1.1.2",
+  "version": "1.1.1",
   "module": "lib/index.mjs",
   "main": "lib/index.js",
+  "types": "types/index.d.ts",
   "svelte": "src/index.js",
   "homepage": "https://saurav.tech/mdbsvelte/?path=/story/charts--examples",
   "author": "Saurav Kanchan",
   "license": "MIT",
   "files": [
     "src",
+    "types",
     "lib"
   ],
   "keywords": [
@@ -32,9 +34,9 @@
     "@rollup/plugin-node-resolve": "^7.0.0",
     "rollup": "^1.20.0",
     "rollup-plugin-livereload": "^1.0.0",
-    "rollup-plugin-svelte": "^5.0.3",
+    "rollup-plugin-svelte": "^7.1.0",
     "rollup-plugin-terser": "^5.1.2",
-    "svelte": "^3.0.0"
+    "svelte": "^3.31.0"
   },
   "dependencies": {
     "chart.js": "^3.5.0"
