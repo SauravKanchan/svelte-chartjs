@@ -13,6 +13,11 @@
     yMarkers: {},
     yRegions: [],
   };
+  export function update(){
+      if(!(chart === null)){
+        chart.update('none');
+      }
+    }
   export let type = 'line';
   export let options = {};
   export let plugins = [];
