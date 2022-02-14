@@ -38,6 +38,7 @@
   });
 
   onDestroy(() => {
+    if (chart) chart.destroy();
     chart = null;
   });
 </script>
