@@ -1,13 +1,13 @@
 {
   "name": "svelte-chartjs",
   "version": "1.1.1",
+  "author": "Saurav Kanchan",
+  "homepage": "https://saurav.tech/mdbsvelte/?path=/story/charts--examples",
+  "license": "MIT",
   "module": "lib/index.mjs",
   "main": "lib/index.js",
   "types": "types/index.d.ts",
   "svelte": "src/index.js",
-  "homepage": "https://saurav.tech/mdbsvelte/?path=/story/charts--examples",
-  "author": "Saurav Kanchan",
-  "license": "MIT",
   "files": [
     "src",
     "types",
@@ -27,7 +27,7 @@
   "scripts": {
     "dist": "rollup -c",
     "dev": "rollup -c -w",
-    "prepublishOnly": "npm run dist"
+    "prepublishOnly": "pnpm dist"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "11.0.2",
