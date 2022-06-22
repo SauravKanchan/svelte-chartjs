@@ -27,15 +27,23 @@
   "scripts": {
     "dist": "rollup -c",
     "dev": "rollup -c -w",
-    "prepublishOnly": "pnpm dist"
+    "prepublishOnly": "pnpm dist",
+    "commit": "cz",
+    "release": "standard-version"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.0.2",
+    "@commitlint/config-conventional": "^17.0.2",
+    "@commitlint/cz-commitlint": "^17.0.0",
     "@rollup/plugin-commonjs": "11.0.2",
     "@rollup/plugin-node-resolve": "^7.0.0",
-    "rollup": "^1.20.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "rollup": "^2.75.7",
     "rollup-plugin-livereload": "^1.0.0",
     "rollup-plugin-svelte": "^7.1.0",
     "rollup-plugin-terser": "^5.1.2",
+    "standard-version": "^9.5.0",
     "svelte": "^3.45.0"
   },
   "dependencies": {
