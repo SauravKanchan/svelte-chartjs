@@ -1,0 +1,43 @@
+{
+  "plugins": [
+    "import",
+    "svelte3"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/recommended"
+  ],
+  "env": {
+    "browser": true
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/*.svelte"
+      ],
+      "processor": "svelte3/svelte3"
+    }
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module"
+  },
+  "rules": {
+    "arrow-parens": 0,
+    "curly": [
+      2,
+      "multi-line"
+    ],
+    "quotes": [
+      2,
+      "single",
+      "avoid-escape"
+    ],
+    "semi": [
+      2,
+      "always"
+    ],
+    "strict": 0,
+    "no-use-before-define": 0
+  }
+}

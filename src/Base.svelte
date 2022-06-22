@@ -1,15 +1,13 @@
 <script>
-  import {onMount, afterUpdate, onDestroy} from 'svelte';
-  import {clean} from './utils';
-  import {Chart, registerables} from 'chart.js/dist/chart.esm';
+  import { onMount, afterUpdate, onDestroy } from 'svelte';
+  import { clean } from './utils';
+  import { Chart, registerables } from 'chart.js/dist/chart.esm';
   Chart.register(...registerables);
 
   //  Expected data
   export let data = {
     labels: [],
-    datasets: [
-      {data: []}
-    ],
+    datasets: [{ data: [] }],
     yMarkers: {},
     yRegions: [],
   };
@@ -18,13 +16,13 @@
   export let plugins = [];
   let chart = null;
   let chartRef;
-  let props = clean($$props, ["data", "type", "options", "plugins"]);
+  let props = clean($$props, ['data', 'type', 'options', 'plugins']);
   onMount(() => {
     chart = new Chart(chartRef, {
       type,
       data,
       options,
-      plugins
+      plugins,
     });
   });
   afterUpdate(() => {
@@ -34,7 +32,7 @@
     chart.type = type;
     chart.options = options;
     chart.plugins = plugins;
-    chart.update()
+    chart.update();
   });
 
   onDestroy(() => {
@@ -43,4 +41,4 @@
   });
 </script>
 
-<canvas bind:this={chartRef} {...props}></canvas>
+<canvas bind:this={chartRef} {...props} />
