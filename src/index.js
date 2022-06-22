@@ -19,6 +19,5 @@ export {
   HorizontalBar,
   Scatter,
   Bubble,
-  Polar
-}
-
+  Polar,
+};

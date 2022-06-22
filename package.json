@@ -29,7 +29,10 @@
     "dev": "rollup -c -w",
     "prepublishOnly": "pnpm dist",
     "commit": "cz",
-    "release": "standard-version"
+    "release": "standard-version",
+    "format": "prettier --write 'src/**/*.{js,svelte}'",
+    "test:lint": "eslint src --ext .js,.svelte",
+    "test": "pnpm test:lint"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.2",
@@ -39,6 +42,11 @@
     "@rollup/plugin-node-resolve": "^7.0.0",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.18.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-svelte3": "^4.0.0",
+    "prettier": "^2.7.1",
+    "prettier-plugin-svelte": "^2.7.0",
     "rollup": "^2.75.7",
     "rollup-plugin-livereload": "^1.0.0",
     "rollup-plugin-svelte": "^7.1.0",
