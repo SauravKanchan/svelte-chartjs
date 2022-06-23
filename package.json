@@ -5,13 +5,15 @@
   "homepage": "https://saurav.tech/mdbsvelte/?path=/story/charts--examples",
   "license": "MIT",
   "module": "lib/index.mjs",
-  "main": "lib/index.js",
-  "types": "types/index.d.ts",
-  "svelte": "src/index.js",
+  "main": "src/index.js",
+  "publishConfig": {
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.js",
+    "unpkg": "./dist/umd.js",
+    "directory": "package"
+  },
   "files": [
-    "src",
-    "types",
-    "lib"
+    "dist"
   ],
   "keywords": [
     "svelte",
@@ -25,23 +27,31 @@
     "url": "https://github.com/SauravKanchan/svelte-chartjs"
   },
   "scripts": {
-    "dist": "rollup -c",
+    "build": "rollup -c",
     "dev": "rollup -c -w",
-    "prepublishOnly": "pnpm dist",
+    "prepublishOnly": "pnpm test && pnpm build && del ./package && clean-publish",
+    "postpublish": "del ./package",
     "commit": "cz",
     "release": "standard-version",
     "format": "prettier --write 'src/**/*.{js,svelte}'",
     "test:lint": "eslint src --ext .js,.svelte",
     "test": "pnpm test:lint"
   },
+  "peerDependencies": {
+    "chart.js": "^3.5.0",
+    "svelte": "^3.45.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "^17.0.2",
     "@commitlint/config-conventional": "^17.0.2",
     "@commitlint/cz-commitlint": "^17.0.0",
     "@rollup/plugin-commonjs": "11.0.2",
-    "@rollup/plugin-node-resolve": "^7.0.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "chart.js": "^3.5.0",
+    "clean-publish": "^4.0.1",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
+    "del-cli": "^4.0.1",
     "eslint": "^8.18.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-svelte3": "^4.0.0",
@@ -54,8 +64,5 @@
     "rollup-plugin-terser": "^5.1.2",
     "standard-version": "^9.5.0",
     "svelte": "^3.45.0"
-  },
-  "dependencies": {
-    "chart.js": "^3.5.0"
   }
 }

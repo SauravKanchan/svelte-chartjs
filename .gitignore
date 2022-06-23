@@ -6,6 +6,7 @@ lib
 dist
 .idea
 lib
+package
 
 
 # Created by https://www.gitignore.io/api/node,jetbrains+all
