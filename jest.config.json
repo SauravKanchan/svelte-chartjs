@@ -1,0 +1,25 @@
+{
+  "testEnvironment": "jsdom",
+  "setupFiles": ["<rootDir>/test/setup.js"],
+  "testMatch": ["<rootDir>/test/(*.)spec.(js|ts)"],
+  "transform": {
+    "^.+\\.(t|j)sx?$": [
+      "@swc/jest",
+      {
+        "module": {
+          "type": "commonjs"
+        },
+        "env": {
+          "targets": {
+            "node": 12
+          }
+        }
+      }
+    ],
+    "^.+\\.svelte$": "svelte-jester"
+  },
+  "moduleFileExtensions": ["js", "svelte"],
+  "collectCoverage": true,
+  "collectCoverageFrom": ["<rootDir>/src/**/*"],
+  "coverageReporters": ["lcovonly", "text"]
+}
