@@ -7,6 +7,7 @@ interface NoTypeChartConfiguration {
 }
 
 export declare class Base extends SvelteComponentTyped<ChartConfiguration>{ }
+export declare class Bar extends SvelteComponentTyped<NoTypeChartConfiguration>{ }
 export declare class Line extends SvelteComponentTyped<NoTypeChartConfiguration>{ }
 export declare class Radar extends SvelteComponentTyped<NoTypeChartConfiguration>{ }
 export declare class Doughnut extends SvelteComponentTyped<NoTypeChartConfiguration>{ }
