@@ -1,28 +1,11 @@
 import { Doughnut } from '../src/index';
+import { data } from '../sandboxes/doughnut/components/data';
 
 import { render } from '@testing-library/svelte';
 
-const data = {
-  labels: ['Red', 'Green', 'Yellow', 'Grey', 'Dark Grey'],
-  datasets: [
-    {
-      data: [300, 50, 100, 40, 120],
-      backgroundColor: ['#F7464A', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'],
-      hoverBackgroundColor: [
-        '#FF5A5E',
-        '#5AD3D1',
-        '#FFC870',
-        '#A8B3C5',
-        '#616774'
-      ]
-    }
-  ]
-};
-
 const options = {
-  responsive: true
+  responsive: true,
 };
-
 
 describe('Doughnut Chart', () => {
   it('should render a canvas', () => {
