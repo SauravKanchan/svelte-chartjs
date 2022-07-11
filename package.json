@@ -31,14 +31,16 @@
     "prepublishOnly": "pnpm test && pnpm build && del ./package && clean-publish",
     "postpublish": "del ./package",
     "commit": "cz",
-    "release": "standard-version",
     "format": "prettier --write 'src/**/*.{js,svelte}'",
     "test:lint": "eslint src --ext .js,.svelte",
     "test:size": "size-limit",
     "test:unit": "jest -c jest.config.json",
     "test": "pnpm test:lint && pnpm test:unit",
     "start:storybook": "start-storybook -p 6006",
-    "build:storybook": "del ./storybook-static; NODE_ENV=production build-storybook"
+    "build:storybook": "del ./storybook-static; NODE_ENV=production build-storybook",
+    "bumpVersion": "standard-version",
+    "createGithubRelease": "simple-github-release",
+    "release": "pnpm bumpVersion && git push origin master --tags && pnpm createGithubRelease"
   },
   "peerDependencies": {
     "chart.js": "^3.5.0",
@@ -77,6 +79,7 @@
     "rollup-plugin-livereload": "^1.0.0",
     "rollup-plugin-svelte": "^7.1.0",
     "rollup-plugin-terser": "^5.1.2",
+    "simple-github-release": "^1.0.0",
     "size-limit": "^7.0.8",
     "standard-version": "^9.5.0",
     "svelte": "^3.45.0",
