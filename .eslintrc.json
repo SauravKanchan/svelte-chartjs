@@ -1,7 +1,8 @@
 {
+  "parser": "@typescript-eslint/parser",
   "plugins": [
-    "import",
-    "svelte3"
+    "svelte3",
+    "@typescript-eslint"
   ],
   "extends": [
     "eslint:recommended",
@@ -38,6 +39,10 @@
       "always"
     ],
     "strict": 0,
-    "no-use-before-define": 0
+    "no-use-before-define": 0,
+    "import/no-unresolved": 0
+  },
+  "settings": {
+    "svelte3/typescript": true
   }
 }

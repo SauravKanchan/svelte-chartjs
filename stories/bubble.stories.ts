@@ -1,4 +1,4 @@
-import Bubble from '../src/Bubble.svelte';
+import Bubble from '../sandboxes/bubble/components/Chart.svelte';
 import { data } from '../sandboxes/bubble/components/data';
 
 export default {

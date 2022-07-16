@@ -1,4 +1,4 @@
-import Polar from '../src/Polar.svelte';
+import Polar from '../sandboxes/polar/components/Chart.svelte';
 import { data } from '../sandboxes/polar/components/data';
 
 export default {

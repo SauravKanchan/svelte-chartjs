@@ -1,4 +1,4 @@
-import Doughnut from '../src/Doughnut.svelte';
+import Doughnut from '../sandboxes/doughnut/components/Chart.svelte';
 import { data } from '../sandboxes/doughnut/components/data';
 
 export default {

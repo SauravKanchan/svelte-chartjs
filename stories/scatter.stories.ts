@@ -1,4 +1,4 @@
-import Scatter from '../src/Scatter.svelte';
+import Scatter from '../sandboxes/scatter/components/Chart.svelte';
 import { data } from '../sandboxes/scatter/components/data';
 
 export default {
