@@ -20,7 +20,7 @@
     "^.+\\.svelte$": [
       "svelte-jester",
       {
-        "preprocess": true
+        "preprocess": "./svelte.config.mjs"
       }
     ]
   },
