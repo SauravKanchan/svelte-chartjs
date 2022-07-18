@@ -78,7 +78,7 @@
     "rollup": "^2.75.7",
     "rollup-plugin-livereload": "^1.0.0",
     "rollup-plugin-svelte": "^7.1.0",
-    "rollup-plugin-terser": "^5.1.2",
+    "rollup-plugin-terser": "^7.0.0",
     "simple-github-release": "^1.0.0",
     "size-limit": "^7.0.8",
     "standard-version": "^9.5.0",
