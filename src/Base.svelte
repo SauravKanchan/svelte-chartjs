@@ -21,9 +21,9 @@
 
   function clean(
     $$props: { [x: string]: any },
-    extra_keys: ConcatArray<string>
+    extraCase: ConcatArray<string>
   ) {
-    let keys = ['children', '$$scope', '$$slots'].concat(extra_keys);
+    let keys = ['children', '$$scope', '$$slots'].concat(extraCase);
     const rest = {};
     for (const key of Object.keys($$props)) {
       if (!keys.includes(key)) {

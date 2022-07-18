@@ -9,7 +9,8 @@
     "plugin:import/recommended"
   ],
   "env": {
-    "browser": true
+    "browser": true,
+    "node": true
   },
   "overrides": [
     {
