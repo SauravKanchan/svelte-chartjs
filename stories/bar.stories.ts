@@ -1,4 +1,4 @@
-import Bar from '../src/Bar.svelte';
+import Bar from '../sandboxes/bar/components/Chart.svelte';
 import { data } from '../sandboxes/bar/components/data';
 
 export default {

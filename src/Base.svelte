@@ -1,75 +1,42 @@
-<script>
+<script lang="ts">
   import { onMount, afterUpdate, onDestroy } from 'svelte';
-  import { clean } from './utils';
 
-  import {
-    Chart,
-    ArcElement,
-    LineElement,
-    BarElement,
-    PointElement,
-    BarController,
-    BubbleController,
-    DoughnutController,
-    LineController,
-    PieController,
-    PolarAreaController,
-    RadarController,
-    ScatterController,
-    CategoryScale,
-    LinearScale,
-    LogarithmicScale,
-    RadialLinearScale,
-    TimeScale,
-    TimeSeriesScale,
-    Decimation,
-    Filler,
-    Legend,
-    Title,
-    Tooltip,
-    SubTitle,
-  } from 'chart.js';
+  import { Chart } from 'chart.js';
 
-  Chart.register(
-    ArcElement,
-    LineElement,
-    BarElement,
-    PointElement,
-    BarController,
-    BubbleController,
-    DoughnutController,
-    LineController,
-    PieController,
-    PolarAreaController,
-    RadarController,
-    ScatterController,
-    CategoryScale,
-    LinearScale,
-    LogarithmicScale,
-    RadialLinearScale,
-    TimeScale,
-    TimeSeriesScale,
-    Decimation,
-    Filler,
-    Legend,
-    Title,
-    Tooltip,
-    SubTitle
-  );
+  import type {
+    TChartType,
+    TChartData,
+    TChartOptions,
+    TChartPlugin,
+    TypedChartJS,
+  } from './types';
 
-  //  Expected data
-  export let data = {
+  export let data: TChartData = {
     labels: [],
     datasets: [{ data: [] }],
-    yMarkers: {},
-    yRegions: [],
   };
-  export let type = 'line';
-  export let options = {};
-  export let plugins = [];
-  let chart = null;
-  let chartRef;
+  export let type: TChartType = 'line';
+  export let options: TChartOptions<TChartType> = {};
+  export let plugins: TChartPlugin[] = [];
+
+  function clean(
+    $$props: { [x: string]: any },
+    extraCase: ConcatArray<string>
+  ) {
+    let keys = ['children', '$$scope', '$$slots'].concat(extraCase);
+    const rest = {};
+    for (const key of Object.keys($$props)) {
+      if (!keys.includes(key)) {
+        rest[key] = $$props[key];
+      }
+    }
+    return rest;
+  }
+
+  let chart: TypedChartJS | null = null;
+  let chartRef: HTMLCanvasElement;
   let props = clean($$props, ['data', 'type', 'options', 'plugins']);
+
   onMount(() => {
     chart = new Chart(chartRef, {
       type,
@@ -82,9 +49,7 @@
     if (!chart) return;
 
     chart.data = data;
-    chart.type = type;
     chart.options = options;
-    chart.plugins = plugins;
     chart.update();
   });
 

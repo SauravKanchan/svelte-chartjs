@@ -4,8 +4,7 @@
   "author": "Saurav Kanchan",
   "homepage": "https://saurav.tech/mdbsvelte/?path=/story/charts--examples",
   "license": "MIT",
-  "module": "lib/index.mjs",
-  "main": "src/index.js",
+  "main": "src/index.ts",
   "publishConfig": {
     "main": "./dist/index.cjs",
     "module": "./dist/index.js",
@@ -27,11 +26,13 @@
     "url": "https://github.com/SauravKanchan/svelte-chartjs"
   },
   "scripts": {
-    "build": "rollup -c",
+    "emitDeclarations": "node scripts/emitSvelteDeclarations.cjs",
+    "build:svelte": "svelte-strip strip src/ dist",
+    "build": "rollup -c && pnpm build:svelte && pnpm emitDeclarations",
     "prepublishOnly": "pnpm test && pnpm build && del ./package && clean-publish",
     "postpublish": "del ./package",
     "commit": "cz",
-    "format": "prettier --write 'src/**/*.{js,svelte}'",
+    "format": "prettier --write 'src/**/*.{js,ts,svelte}'",
     "test:lint": "eslint src --ext .js,.svelte",
     "test:size": "size-limit",
     "test:unit": "jest -c jest.config.json",
@@ -52,7 +53,6 @@
     "@commitlint/cli": "^17.0.2",
     "@commitlint/config-conventional": "^17.0.2",
     "@commitlint/cz-commitlint": "^17.0.0",
-    "@rollup/plugin-commonjs": "11.1.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@size-limit/preset-big-lib": "^7.0.8",
     "@storybook/addon-actions": "^6.5.9",
@@ -61,6 +61,9 @@
     "@swc/core": "^1.2.207",
     "@swc/jest": "^0.2.21",
     "@testing-library/svelte": "^3.1.3",
+    "@types/jest": "^28.1.5",
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
     "chart.js": "^3.5.0",
     "clean-publish": "^4.0.1",
     "commitizen": "^4.2.4",
@@ -78,12 +81,16 @@
     "rollup": "^2.75.7",
     "rollup-plugin-livereload": "^1.0.0",
     "rollup-plugin-svelte": "^7.1.0",
-    "rollup-plugin-terser": "^5.1.2",
+    "rollup-plugin-swc": "^0.2.1",
     "simple-github-release": "^1.0.0",
     "size-limit": "^7.0.8",
     "standard-version": "^9.5.0",
     "svelte": "^3.45.0",
     "svelte-jester": "^2.3.2",
-    "svelte-loader": "^3.1.3"
+    "svelte-loader": "^3.1.3",
+    "svelte-preprocess": "^4.10.7",
+    "svelte-strip": "^1.0.1",
+    "svelte2tsx": "^0.5.11",
+    "typescript": "^4.7.4"
   }
 }

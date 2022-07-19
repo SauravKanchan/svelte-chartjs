@@ -1,4 +1,4 @@
-import Radar from '../src/Radar.svelte';
+import Radar from '../sandboxes/radar/components/Chart.svelte';
 import { data } from '../sandboxes/radar/components/data';
 
 export default {

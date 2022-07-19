@@ -4,5 +4,6 @@
   "tabWidth": 2,
   "bracketSpacing": true,
   "arrowParens": "avoid",
-  "trailingComma": "es5"
+  "trailingComma": "es5",
+  "plugins": ["prettier-plugin-svelte"]
 }

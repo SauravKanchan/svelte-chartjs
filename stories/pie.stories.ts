@@ -1,4 +1,4 @@
-import Pie from '../src/Pie.svelte';
+import Pie from '../sandboxes/pie/components/Chart.svelte';
 import { data } from '../sandboxes/pie/components/data';
 
 export default {
