@@ -5,6 +5,7 @@
   "homepage": "https://saurav.tech/mdbsvelte/?path=/story/charts--examples",
   "license": "MIT",
   "main": "src/index.ts",
+  "types": "./dist/index.d.ts",
   "publishConfig": {
     "main": "./dist/index.cjs",
     "module": "./dist/index.js",
