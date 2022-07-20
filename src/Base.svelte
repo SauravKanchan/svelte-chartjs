@@ -19,23 +19,18 @@
   export let options: TChartOptions<TChartType> = {};
   export let plugins: TChartPlugin[] = [];
 
-  function clean(
-    $$props: { [x: string]: any },
-    extraCase: ConcatArray<string>
-  ) {
-    let keys = ['children', '$$scope', '$$slots'].concat(extraCase);
-    const rest = {};
-    for (const key of Object.keys($$props)) {
-      if (!keys.includes(key)) {
-        rest[key] = $$props[key];
-      }
-    }
+  function clean(props: SvelteAllProps) {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    let { data, type, options, plugins, children, $$scope, $$slots, ...rest } =
+      props;
+
     return rest;
   }
 
+  let props = clean($$props);
+
   let chart: TypedChartJS | null = null;
   let chartRef: HTMLCanvasElement;
-  let props = clean($$props, ['data', 'type', 'options', 'plugins']);
 
   onMount(() => {
     chart = new Chart(chartRef, {

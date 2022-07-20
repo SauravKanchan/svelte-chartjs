@@ -43,3 +43,11 @@ jobs:
         run: pnpm install
       - name: Check storybook
         run: pnpm build:storybook
+  editorconfig:
+    runs-on: ubuntu-latest
+    name: editorconfig
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+      - name: Check editorconfig
+        uses: editorconfig-checker/action-editorconfig-checker@v1

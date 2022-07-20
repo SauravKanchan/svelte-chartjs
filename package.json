@@ -8,7 +8,6 @@
   "publishConfig": {
     "main": "./dist/index.cjs",
     "module": "./dist/index.js",
-    "unpkg": "./dist/umd.js",
     "directory": "package"
   },
   "files": [

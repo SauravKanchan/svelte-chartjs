@@ -1,11 +1,12 @@
 <script lang="ts">
   import { Chart, RadarController } from 'chart.js';
+  import type { DefaultDataPoint } from 'chart.js';
 
   import Base from './Base.svelte';
   import type { TChartData, TChartOptions, TChartPlugin } from './types';
 
   interface $$Props {
-    data: TChartData<'radar', (number | null)[], unknown>;
+    data: TChartData<'radar', DefaultDataPoint<'radar'>, unknown>;
     options?: TChartOptions<'radar'>;
     plugins?: TChartPlugin<'radar'>[];
   }
