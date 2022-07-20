@@ -1,5 +1,5 @@
 <script>
-  import Line from 'svelte-chartjs/Line.svelte';
+  import { Line } from 'svelte-chartjs';
   import { data } from './data.js';
 
   import {

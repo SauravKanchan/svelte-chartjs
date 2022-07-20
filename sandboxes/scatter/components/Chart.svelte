@@ -1,5 +1,5 @@
 <script>
-  import Scatter from 'svelte-chartjs/Scatter.svelte';
+  import { Scatter } from 'svelte-chartjs';
   import { data } from './data.js';
 
   import {

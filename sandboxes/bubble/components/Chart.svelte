@@ -1,5 +1,5 @@
 <script>
-  import Bubble from 'svelte-chartjs/Bubble.svelte';
+  import { Bubble } from 'svelte-chartjs';
   import { data } from './data.js';
 
   import {

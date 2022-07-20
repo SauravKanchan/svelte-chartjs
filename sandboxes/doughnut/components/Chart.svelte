@@ -1,5 +1,5 @@
 <script>
-  import Doughnut from 'svelte-chartjs/Doughnut.svelte';
+  import { Doughnut } from 'svelte-chartjs';
   import { data } from './data.js';
 
   import {

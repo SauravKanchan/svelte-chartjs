@@ -1,5 +1,5 @@
 <script>
-  import Polar from 'svelte-chartjs/Polar.svelte';
+  import { Polar } from 'svelte-chartjs';
   import { data } from './data.js';
 
   import {
