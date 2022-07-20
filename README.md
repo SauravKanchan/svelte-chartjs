@@ -45,7 +45,7 @@ Need an API to fetch data? Consider [Cube](https://cube.dev/?ref=eco-svelte-char
 
 ```svelte
 <script>
-  import Line from 'svelte-chartjs/Line.svelte'
+  import { Line } from 'svelte-chartjs'
 </script>
 
 <Line data={...} />
@@ -79,7 +79,7 @@ import Line from 'svelte-chartjs/src/Line.svelte'
 v2:
 
 ```javascript
-import Line from 'svelte-chartjs/Line.svelte'
+import { Line } from 'svelte-chartjs'
 ```
 
 ### Tree-shaking
@@ -97,14 +97,14 @@ import Line from 'svelte-chartjs/src/Line.svelte'
 v2 — lazy way:
 
 ```javascript
-import Line from 'svelte-chartjs/Line.svelte'
+import { Line } from 'svelte-chartjs'
 import 'chart.js/auto';
 ```
 
 v2 — tree-shakable way:
 
 ```javascript
-import Line from 'svelte-chartjs/Line.svelte'
+import { Line } from 'svelte-chartjs'
 import { Chart as ChartJS, Title, Tooltip, Legend, LineElement, LinearScale, PointElement, CategoryScale } from 'chart.js';
 
 ChartJS.register(Title, Tooltip, Legend, LineElement, LinearScale, PointElement, CategoryScale);
@@ -115,7 +115,7 @@ Using the "lazy way" is okay to simplify the migration, but please consider usin
 Please note that typed chart components register their controllers by default, so you don't need to register them by yourself. For example, when using the Pie component, you don't need to register PieController explicitly.
 
 ```javascript
-import Pie from 'svelte-chartjs/Pie.svelte';
+import { Pie } from 'svelte-chartjs';
 import { Chart as ChartJS, Title, Tooltip, Legend, ArcElement, CategoryScale } from 'chart.js'
 
 ChartJS.register(Title, Tooltip, Legend, ArcElement, CategoryScale)

@@ -1,5 +1,5 @@
 <script>
-  import Radar from 'svelte-chartjs/Radar.svelte';
+  import { Radar } from 'svelte-chartjs';
   import { data } from './data.js';
 
   import {

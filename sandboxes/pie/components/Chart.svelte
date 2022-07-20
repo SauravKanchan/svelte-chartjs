@@ -1,5 +1,5 @@
 <script>
-  import Pie from 'svelte-chartjs/Pie.svelte';
+  import { Pie }  from 'svelte-chartjs';
   import { data } from './data.js';
 
   import {
