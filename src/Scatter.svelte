@@ -1,12 +1,12 @@
 <script lang="ts">
   import { Chart, ScatterController } from 'chart.js';
-  import type { ScatterDataPoint } from 'chart.js';
+  import type { DefaultDataPoint } from 'chart.js';
 
   import Base from './Base.svelte';
   import type { TChartData, TChartOptions, TChartPlugin } from './types';
 
   interface $$Props {
-    data: TChartData<'scatter', (number | ScatterDataPoint | null)[], unknown>;
+    data: TChartData<'scatter', DefaultDataPoint<'scatter'>, unknown>;
     options?: TChartOptions<'scatter'>;
     plugins?: TChartPlugin<'scatter'>[];
   }
