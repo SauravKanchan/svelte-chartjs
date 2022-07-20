@@ -2,6 +2,6 @@
   "name": "polar-chart",
   "dependencies": {
     "svelte": "^3.32.3",
-    "svelte-chartjs": "^2.0.0"
+    "svelte-chartjs": "^1.1.4"
   }
 }
