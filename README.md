@@ -1,5 +1,7 @@
 # svelte-chartjs
 
+<img align="right" width="150" height="150" alt="svelte-chartjs logo" src="https://raw.githubusercontent.com/SauravKanchan/svelte-chartjs/master/assets/svelte-chartjs.png">
+
 Svelte wrapper for [chart.js](https://www.chartjs.org/) Open for PRs and contributions!
 
 [![npm version](https://badge.fury.io/js/svelte-chartjs.svg)](https://badge.fury.io/js/svelte-chartjs)
