@@ -1,16 +1,18 @@
 <script lang="ts">
-  import { Chart, DoughnutController } from 'chart.js';
-
+  import type { DefaultDataPoint } from 'chart.js';
+  import { Chart as ChartJS, DoughnutController } from 'chart.js';
+  import type { ChartProps } from './types';
   import Base from './Base.svelte';
-  import type { TChartData, TChartOptions, TChartPlugin } from './types';
 
-  interface $$Props {
-    data: TChartData<'doughnut', number[], unknown>;
-    options?: TChartOptions<'doughnut'>;
-    plugins?: TChartPlugin<'doughnut'>[];
+  interface $$Props<TData = DefaultDataPoint<'doughnut'>, TLabel = unknown>
+    extends Omit<ChartProps<'doughnut', TData, TLabel>, 'type'> {
+    chart: ChartJS<'doughnut', TData, TLabel> | null;
   }
 
-  Chart.register(DoughnutController);
+  ChartJS.register(DoughnutController);
+
+  export let chart: $$Props['chart'] = null;
+  let props = $$props as $$Props;
 </script>
 
-<Base {...$$props} type="doughnut" />
+<Base bind:chart type="doughnut" {...props} />

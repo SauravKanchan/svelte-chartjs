@@ -1,17 +1,18 @@
 <script lang="ts">
-  import { Chart, ScatterController } from 'chart.js';
   import type { DefaultDataPoint } from 'chart.js';
-
+  import { Chart as ChartJS, ScatterController } from 'chart.js';
+  import type { ChartProps } from './types';
   import Base from './Base.svelte';
-  import type { TChartData, TChartOptions, TChartPlugin } from './types';
 
-  interface $$Props {
-    data: TChartData<'scatter', DefaultDataPoint<'scatter'>, unknown>;
-    options?: TChartOptions<'scatter'>;
-    plugins?: TChartPlugin<'scatter'>[];
+  interface $$Props<TData = DefaultDataPoint<'scatter'>, TLabel = unknown>
+    extends Omit<ChartProps<'scatter', TData, TLabel>, 'type'> {
+    chart: ChartJS<'scatter', TData, TLabel> | null;
   }
 
-  Chart.register(ScatterController);
+  ChartJS.register(ScatterController);
+
+  export let chart: $$Props['chart'] = null;
+  let props = $$props as $$Props;
 </script>
 
-<Base {...$$props} type="scatter" />
+<Base bind:chart type="scatter" {...props} />

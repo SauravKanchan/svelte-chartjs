@@ -12,7 +12,7 @@
   },
   {
     "path": "dist/index.js",
-    "limit": "1.98 KB",
+    "limit": "2.1 KB",
     "webpack": false,
     "running": false
   },

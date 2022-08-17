@@ -1,17 +1,18 @@
 <script lang="ts">
-  import { Chart, BubbleController } from 'chart.js';
-  import type { BubbleDataPoint } from 'chart.js';
-
+  import type { DefaultDataPoint } from 'chart.js';
+  import { Chart as ChartJS, BubbleController } from 'chart.js';
+  import type { ChartProps } from './types';
   import Base from './Base.svelte';
-  import type { TChartData, TChartOptions, TChartPlugin } from './types';
 
-  interface $$Props {
-    data: TChartData<'bubble', BubbleDataPoint[], unknown>;
-    options?: TChartOptions<'bubble'>;
-    plugins?: TChartPlugin<'bubble'>[];
+  interface $$Props<TData = DefaultDataPoint<'bubble'>, TLabel = unknown>
+    extends Omit<ChartProps<'bubble', TData, TLabel>, 'type'> {
+    chart: ChartJS<'bubble', TData, TLabel> | null;
   }
 
-  Chart.register(BubbleController);
+  ChartJS.register(BubbleController);
+
+  export let chart: $$Props['chart'] = null;
+  let props = $$props as $$Props;
 </script>
 
-<Base {...$$props} type="bubble" />
+<Base bind:chart type="bubble" {...props} />

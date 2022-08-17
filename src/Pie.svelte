@@ -1,16 +1,18 @@
 <script lang="ts">
-  import { Chart, PieController } from 'chart.js';
-
+  import type { DefaultDataPoint } from 'chart.js';
+  import { Chart as ChartJS, PieController } from 'chart.js';
+  import type { ChartProps } from './types';
   import Base from './Base.svelte';
-  import type { TChartData, TChartOptions, TChartPlugin } from './types';
 
-  interface $$Props {
-    data: TChartData<'pie', number[], unknown>;
-    options?: TChartOptions<'pie'>;
-    plugins?: TChartPlugin<'pie'>[];
+  interface $$Props<TData = DefaultDataPoint<'pie'>, TLabel = unknown>
+    extends Omit<ChartProps<'pie', TData, TLabel>, 'type'> {
+    chart: ChartJS<'pie', TData, TLabel> | null;
   }
 
-  Chart.register(PieController);
+  ChartJS.register(PieController);
+
+  export let chart: $$Props['chart'] = null;
+  let props = $$props as $$Props;
 </script>
 
-<Base {...$$props} type="pie" />
+<Base bind:chart type="pie" {...props} />
