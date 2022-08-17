@@ -1,16 +1,18 @@
 <script lang="ts">
-  import { Chart, PolarAreaController } from 'chart.js';
-
+  import type { DefaultDataPoint } from 'chart.js';
+  import { Chart as ChartJS, PolarAreaController } from 'chart.js';
+  import type { ChartProps } from './types';
   import Base from './Base.svelte';
-  import type { TChartData, TChartOptions, TChartPlugin } from './types';
 
-  interface $$Props {
-    data: TChartData<'polarArea', number[], unknown>;
-    options?: TChartOptions<'polarArea'>;
-    plugins?: TChartPlugin<'polarArea'>[];
+  interface $$Props<TData = DefaultDataPoint<'polarArea'>, TLabel = unknown>
+    extends Omit<ChartProps<'polarArea', TData, TLabel>, 'type'> {
+    chart: ChartJS<'polarArea', TData, TLabel> | null;
   }
 
-  Chart.register(PolarAreaController);
+  ChartJS.register(PolarAreaController);
+
+  export let chart: $$Props['chart'] = null;
+  let props = $$props as $$Props;
 </script>
 
-<Base {...$$props} type="polarArea" />
+<Base bind:chart type="polarArea" {...props} />

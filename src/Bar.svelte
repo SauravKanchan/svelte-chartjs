@@ -1,16 +1,18 @@
 <script lang="ts">
-  import { Chart, BarController } from 'chart.js';
-
+  import type { DefaultDataPoint } from 'chart.js';
+  import { Chart as ChartJS, BarController } from 'chart.js';
+  import type { ChartProps } from './types';
   import Base from './Base.svelte';
-  import type { TChartData, TChartOptions, TChartPlugin } from './types';
 
-  interface $$Props {
-    data: TChartData<'bar', number[], unknown>;
-    options?: TChartOptions<'bar'>;
-    plugins?: TChartPlugin<'bar'>[];
+  interface $$Props<TData = DefaultDataPoint<'bar'>, TLabel = unknown>
+    extends Omit<ChartProps<'bar', TData, TLabel>, 'type'> {
+    chart: ChartJS<'bar', TData, TLabel> | null;
   }
 
-  Chart.register(BarController);
+  ChartJS.register(BarController);
+
+  export let chart: $$Props['chart'] = null;
+  let props = $$props as $$Props;
 </script>
 
-<Base {...$$props} type="bar" />
+<Base bind:chart type="bar" {...props} />
