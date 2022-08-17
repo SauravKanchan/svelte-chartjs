@@ -1,5 +1,5 @@
-import Pie from '../sandboxes/pie/components/Chart.svelte';
-import { data } from '../sandboxes/pie/components/data';
+import { Pie } from '../src';
+import DefaultExample from '../sandboxes/pie/components/Chart.svelte';
 
 export default {
   title: 'Pie',
@@ -10,8 +10,5 @@ export default {
 };
 
 export const Default = () => ({
-  Component: Pie,
-  props: {
-    data,
-  },
+  Component: DefaultExample,
 });

@@ -1,5 +1,5 @@
-import Scatter from '../sandboxes/scatter/components/Chart.svelte';
-import { data } from '../sandboxes/scatter/components/data';
+import { Scatter } from '../src';
+import DefaultExample from '../sandboxes/scatter/components/Chart.svelte';
 
 export default {
   title: 'Scatter',
@@ -10,8 +10,5 @@ export default {
 };
 
 export const Default = () => ({
-  Component: Scatter,
-  props: {
-    data,
-  },
+  Component: DefaultExample,
 });

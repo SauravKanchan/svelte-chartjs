@@ -1,5 +1,5 @@
-import Bar from '../sandboxes/bar/components/Chart.svelte';
-import { data } from '../sandboxes/bar/components/data';
+import { Bar } from '../src';
+import DefaultExample from '../sandboxes/bar/components/Chart.svelte';
 
 export default {
   title: 'Bar',
@@ -10,8 +10,5 @@ export default {
 };
 
 export const Default = () => ({
-  Component: Bar,
-  props: {
-    data,
-  },
+  Component: DefaultExample,
 });

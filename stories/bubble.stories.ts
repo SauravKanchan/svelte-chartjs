@@ -1,5 +1,5 @@
-import Bubble from '../sandboxes/bubble/components/Chart.svelte';
-import { data } from '../sandboxes/bubble/components/data';
+import { Bubble } from '../src';
+import DefaultExample from '../sandboxes/bubble/components/Chart.svelte';
 
 export default {
   title: 'Bubble',
@@ -10,8 +10,5 @@ export default {
 };
 
 export const Default = () => ({
-  Component: Bubble,
-  props: {
-    data,
-  },
+  Component: DefaultExample,
 });

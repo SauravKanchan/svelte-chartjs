@@ -1,5 +1,5 @@
-import Line from '../sandboxes/line/components/Chart.svelte';
-import { data } from '../sandboxes/line/components/data';
+import { Line } from '../src';
+import DefaultExample from '../sandboxes/line/components/Chart.svelte';
 
 export default {
   title: 'Line',
@@ -10,8 +10,5 @@ export default {
 };
 
 export const Default = () => ({
-  Component: Line,
-  props: {
-    data,
-  },
+  Component: DefaultExample,
 });

@@ -1,5 +1,5 @@
-import Polar from '../sandboxes/polar/components/Chart.svelte';
-import { data } from '../sandboxes/polar/components/data';
+import { Polar } from '../src';
+import DefaultExample from '../sandboxes/polar/components/Chart.svelte';
 
 export default {
   title: 'Polar',
@@ -10,8 +10,5 @@ export default {
 };
 
 export const Default = () => ({
-  Component: Polar,
-  props: {
-    data,
-  },
+  Component: DefaultExample,
 });

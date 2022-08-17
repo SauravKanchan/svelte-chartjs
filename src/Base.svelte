@@ -3,6 +3,7 @@
   import type { ChartType, DefaultDataPoint } from 'chart.js';
   import { Chart as ChartJS } from 'chart.js';
   import type { ChartProps } from './types';
+  import { useForwardEvents } from './utils';
 
   interface $$Props<
     TType extends ChartType = ChartType,
@@ -51,6 +52,8 @@
     if (chart) chart.destroy();
     chart = null;
   });
+
+  useForwardEvents(() => canvasRef);
 </script>
 
 <canvas bind:this={canvasRef} {...props} />

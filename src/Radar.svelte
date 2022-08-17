@@ -3,6 +3,7 @@
   import { Chart as ChartJS, RadarController } from 'chart.js';
   import type { ChartProps } from './types';
   import Base from './Base.svelte';
+  import { useForwardEvents } from './utils';
 
   interface $$Props<TData = DefaultDataPoint<'radar'>, TLabel = unknown>
     extends Omit<ChartProps<'radar', TData, TLabel>, 'type'> {
@@ -13,6 +14,9 @@
 
   export let chart: $$Props['chart'] = null;
   let props = $$props as $$Props;
+  let baseRef: Base;
+
+  useForwardEvents(() => baseRef);
 </script>
 
-<Base bind:chart type="radar" {...props} />
+<Base bind:this={baseRef} bind:chart type="radar" {...props} />
