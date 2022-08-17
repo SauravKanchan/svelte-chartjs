@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/SauravKanchan/svelte-chartjs/compare/v2.0.1...v2.1.0) (2022-08-17)
+
+
+### Features
+
+* events forwarding, getDatasetAtEvent getElementAtEvent getElementsAtEvent events utils ([#63](https://github.com/SauravKanchan/svelte-chartjs/issues/63)) ([e84bd77](https://github.com/SauravKanchan/svelte-chartjs/commit/e84bd7799ea4bd787cc20d2d28701dcca280f1ac))
+* new prop types, expose chart instance ([#62](https://github.com/SauravKanchan/svelte-chartjs/issues/62)) ([d59111a](https://github.com/SauravKanchan/svelte-chartjs/commit/d59111a66f923678e85ac79d179285d89270c223))
+* update mode prop ([#65](https://github.com/SauravKanchan/svelte-chartjs/issues/65)) ([d6e5506](https://github.com/SauravKanchan/svelte-chartjs/commit/d6e55060cc69b712bffb514205c0f0115dcd204d))
+
+
+### Bug Fixes
+
+* rename components Base -> Chart, Polar -> PolarArea ([#64](https://github.com/SauravKanchan/svelte-chartjs/issues/64)) ([ec905cc](https://github.com/SauravKanchan/svelte-chartjs/commit/ec905ccfaf51c0374211096e4656d061ab85f6da))
+
 ### [2.0.1](https://github.com/SauravKanchan/svelte-chartjs/compare/v2.0.0...v2.0.1) (2022-07-20)
 
 
