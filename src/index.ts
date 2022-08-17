@@ -8,4 +8,6 @@ import Bubble from './Bubble.svelte';
 import Scatter from './Scatter.svelte';
 import Base from './Base.svelte';
 
+export * from './types';
+export * from './utils';
 export { Base, Line, Radar, Doughnut, Pie, Bar, Scatter, Bubble, Polar };

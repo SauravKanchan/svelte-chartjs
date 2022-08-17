@@ -1,5 +1,5 @@
-import Radar from '../sandboxes/radar/components/Chart.svelte';
-import { data } from '../sandboxes/radar/components/data';
+import { Radar } from '../src';
+import DefaultExample from '../sandboxes/radar/components/Chart.svelte';
 
 export default {
   title: 'Radar',
@@ -10,8 +10,5 @@ export default {
 };
 
 export const Default = () => ({
-  Component: Radar,
-  props: {
-    data,
-  },
+  Component: DefaultExample,
 });

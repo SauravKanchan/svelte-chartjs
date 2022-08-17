@@ -133,6 +133,8 @@ ChartJS.register(Title, Tooltip, Legend, ArcElement, CategoryScale)
 - [PolarArea Chart](https://codesandbox.io/s/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/polar)
 - [Radar Chart](https://codesandbox.io/s/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/radar)
 - [Scatter Chart](https://codesandbox.io/s/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/scatter)
+- [ChartJS instance](https://codesandbox.io/s/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/ref)
+- [Events handling](https://codesandbox.io/s/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/events)
 
 ## Docs for v1
 

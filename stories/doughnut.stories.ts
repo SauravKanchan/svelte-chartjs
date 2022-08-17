@@ -1,5 +1,5 @@
-import Doughnut from '../sandboxes/doughnut/components/Chart.svelte';
-import { data } from '../sandboxes/doughnut/components/data';
+import { Doughnut } from '../src';
+import DefaultExample from '../sandboxes/doughnut/components/Chart.svelte';
 
 export default {
   title: 'Doughnut',
@@ -10,8 +10,5 @@ export default {
 };
 
 export const Default = () => ({
-  Component: Doughnut,
-  props: {
-    data,
-  },
+  Component: DefaultExample,
 });
