@@ -1,5 +1,5 @@
 <script>
-  import { Pie }  from 'svelte-chartjs';
+  import { Pie } from 'svelte-chartjs';
   import { data } from './data.js';
 
   import {
@@ -9,7 +9,6 @@
     Legend,
     ArcElement,
     CategoryScale,
-    Plugin,
   } from 'chart.js';
 
   ChartJS.register(Title, Tooltip, Legend, ArcElement, CategoryScale);

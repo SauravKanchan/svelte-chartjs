@@ -1,10 +1,10 @@
-import { Base } from '../src';
+import { Chart } from '../src';
 import RefExample from '../sandboxes/ref/components/Chart.svelte';
 import EventsExample from '../sandboxes/events/components/Chart.svelte';
 
 export default {
   title: 'Chart',
-  component: Base,
+  component: Chart,
   parameters: {
     layout: 'centered',
   },

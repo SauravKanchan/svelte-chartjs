@@ -1,5 +1,5 @@
 <script>
-  import { Polar } from 'svelte-chartjs';
+  import { PolarArea } from 'svelte-chartjs';
   import { data } from './data.js';
 
   import {
@@ -9,10 +9,9 @@
     Legend,
     ArcElement,
     RadialLinearScale,
-    Plugin,
   } from 'chart.js';
 
   ChartJS.register(Title, Tooltip, Legend, ArcElement, RadialLinearScale);
 </script>
 
-<Polar {data} options={{ responsive: true }} />
+<PolarArea {data} options={{ responsive: true }} />
