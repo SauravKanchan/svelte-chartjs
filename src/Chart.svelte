@@ -27,6 +27,7 @@
   };
   export let options: $$Props['options'] = {};
   export let plugins: $$Props['plugins'] = [];
+  export let updateMode: $$Props['updateMode'] = undefined;
   export let chart: $$Props['chart'] = null;
   let canvasRef: HTMLCanvasElement;
   let props = clean($$props);
@@ -45,7 +46,7 @@
 
     chart.data = data;
     chart.options = options;
-    chart.update();
+    chart.update(updateMode);
   });
 
   onDestroy(() => {

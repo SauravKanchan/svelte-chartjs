@@ -4,7 +4,7 @@ import type {
   ChartOptions,
   DefaultDataPoint,
   Plugin,
-  // UpdateMode,
+  UpdateMode,
 } from 'chart.js';
 import type { HTMLAttributes } from './html';
 
@@ -38,5 +38,5 @@ export interface ChartBaseProps<
    * A mode string to indicate transition configuration should be used.
    * @see https://www.chartjs.org/docs/latest/developers/api.html#update-mode
    */
-  // updateMode?: UpdateMode;
+  updateMode?: UpdateMode;
 }
