@@ -1,6 +1,6 @@
 <script>
   import {
-    Base as Chart,
+    Chart,
     getDatasetAtEvent,
     getElementAtEvent,
     getElementsAtEvent,

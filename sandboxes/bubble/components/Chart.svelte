@@ -9,7 +9,6 @@
     Legend,
     PointElement,
     LinearScale,
-    Plugin,
   } from 'chart.js';
 
   ChartJS.register(Title, Tooltip, Legend, PointElement, LinearScale);

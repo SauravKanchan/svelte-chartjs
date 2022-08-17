@@ -1,12 +1,12 @@
 <script lang="ts">
   import type { DefaultDataPoint } from 'chart.js';
   import { Chart as ChartJS, PolarAreaController } from 'chart.js';
-  import type { ChartProps } from './types';
-  import Base from './Base.svelte';
+  import type { ChartBaseProps } from './types';
+  import Chart from './Chart.svelte';
   import { useForwardEvents } from './utils';
 
   interface $$Props<TData = DefaultDataPoint<'polarArea'>, TLabel = unknown>
-    extends Omit<ChartProps<'polarArea', TData, TLabel>, 'type'> {
+    extends Omit<ChartBaseProps<'polarArea', TData, TLabel>, 'type'> {
     chart: ChartJS<'polarArea', TData, TLabel> | null;
   }
 
@@ -14,9 +14,9 @@
 
   export let chart: $$Props['chart'] = null;
   let props = $$props as $$Props;
-  let baseRef: Base;
+  let baseChartRef: Chart;
 
-  useForwardEvents(() => baseRef);
+  useForwardEvents(() => baseChartRef);
 </script>
 
-<Base bind:this={baseRef} bind:chart type="polarArea" {...props} />
+<Chart bind:this={baseChartRef} bind:chart type="polarArea" {...props} />

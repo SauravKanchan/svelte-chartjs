@@ -1,6 +1,6 @@
 <script>
   import { onMount } from 'svelte';
-  import { Base as Chart } from 'svelte-chartjs';
+  import { Chart } from 'svelte-chartjs';
   import { data, options } from './data.js';
 
   import {

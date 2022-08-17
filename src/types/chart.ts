@@ -8,7 +8,7 @@ import type {
 } from 'chart.js';
 import type { HTMLAttributes } from './html';
 
-export interface ChartProps<
+export interface ChartBaseProps<
   TType extends ChartType = ChartType,
   TData = DefaultDataPoint<TType>,
   TLabel = unknown

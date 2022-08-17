@@ -11,7 +11,6 @@
     CategoryScale,
     LinearScale,
     PointElement,
-    Plugin,
   } from 'chart.js';
 
   ChartJS.register(

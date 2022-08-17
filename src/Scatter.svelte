@@ -1,12 +1,12 @@
 <script lang="ts">
   import type { DefaultDataPoint } from 'chart.js';
   import { Chart as ChartJS, ScatterController } from 'chart.js';
-  import type { ChartProps } from './types';
-  import Base from './Base.svelte';
+  import type { ChartBaseProps } from './types';
+  import Chart from './Chart.svelte';
   import { useForwardEvents } from './utils';
 
   interface $$Props<TData = DefaultDataPoint<'scatter'>, TLabel = unknown>
-    extends Omit<ChartProps<'scatter', TData, TLabel>, 'type'> {
+    extends Omit<ChartBaseProps<'scatter', TData, TLabel>, 'type'> {
     chart: ChartJS<'scatter', TData, TLabel> | null;
   }
 
@@ -14,9 +14,9 @@
 
   export let chart: $$Props['chart'] = null;
   let props = $$props as $$Props;
-  let baseRef: Base;
+  let baseChartRef: Chart;
 
-  useForwardEvents(() => baseRef);
+  useForwardEvents(() => baseChartRef);
 </script>
 
-<Base bind:this={baseRef} bind:chart type="scatter" {...props} />
+<Chart bind:this={baseChartRef} bind:chart type="scatter" {...props} />

@@ -9,7 +9,6 @@
     Legend,
     ArcElement,
     CategoryScale,
-    Plugin,
   } from 'chart.js';
 
   ChartJS.register(Title, Tooltip, Legend, ArcElement, CategoryScale);
