@@ -7,7 +7,7 @@
 
   interface $$Props<TData = DefaultDataPoint<'bar'>, TLabel = unknown>
     extends Omit<ChartBaseProps<'bar', TData, TLabel>, 'type'> {
-    chart: ChartJS<'bar', TData, TLabel> | null;
+    chart?: ChartJS<'bar', TData, TLabel> | null;
   }
 
   ChartJS.register(BarController);

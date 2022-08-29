@@ -7,7 +7,7 @@
 
   interface $$Props<TData = DefaultDataPoint<'pie'>, TLabel = unknown>
     extends Omit<ChartBaseProps<'pie', TData, TLabel>, 'type'> {
-    chart: ChartJS<'pie', TData, TLabel> | null;
+    chart?: ChartJS<'pie', TData, TLabel> | null;
   }
 
   ChartJS.register(PieController);

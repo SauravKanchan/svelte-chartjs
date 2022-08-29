@@ -7,7 +7,7 @@
 
   interface $$Props<TData = DefaultDataPoint<'bubble'>, TLabel = unknown>
     extends Omit<ChartBaseProps<'bubble', TData, TLabel>, 'type'> {
-    chart: ChartJS<'bubble', TData, TLabel> | null;
+    chart?: ChartJS<'bubble', TData, TLabel> | null;
   }
 
   ChartJS.register(BubbleController);
