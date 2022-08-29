@@ -10,7 +10,7 @@
     TData = DefaultDataPoint<TType>,
     TLabel = unknown
   > extends ChartBaseProps<TType, TData, TLabel> {
-    chart: ChartJS<TType, TData, TLabel> | null;
+    chart?: ChartJS<TType, TData, TLabel> | null;
   }
 
   function clean(props: SvelteAllProps) {

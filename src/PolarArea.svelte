@@ -7,7 +7,7 @@
 
   interface $$Props<TData = DefaultDataPoint<'polarArea'>, TLabel = unknown>
     extends Omit<ChartBaseProps<'polarArea', TData, TLabel>, 'type'> {
-    chart: ChartJS<'polarArea', TData, TLabel> | null;
+    chart?: ChartJS<'polarArea', TData, TLabel> | null;
   }
 
   ChartJS.register(PolarAreaController);

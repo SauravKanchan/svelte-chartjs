@@ -7,7 +7,7 @@
 
   interface $$Props<TData = DefaultDataPoint<'scatter'>, TLabel = unknown>
     extends Omit<ChartBaseProps<'scatter', TData, TLabel>, 'type'> {
-    chart: ChartJS<'scatter', TData, TLabel> | null;
+    chart?: ChartJS<'scatter', TData, TLabel> | null;
   }
 
   ChartJS.register(ScatterController);
