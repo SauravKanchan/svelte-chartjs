@@ -1,9 +1,9 @@
 <script lang="ts">
   import type { DefaultDataPoint } from 'chart.js';
   import { Chart as ChartJS, BubbleController } from 'chart.js';
-  import type { ChartBaseProps } from './types';
+  import type { ChartBaseProps } from './types/index.js';
   import Chart from './Chart.svelte';
-  import { useForwardEvents } from './utils';
+  import { useForwardEvents } from './utils/index.js';
 
   interface $$Props<TData = DefaultDataPoint<'bubble'>, TLabel = unknown>
     extends Omit<ChartBaseProps<'bubble', TData, TLabel>, 'type'> {

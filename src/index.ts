@@ -19,8 +19,8 @@ const Base = Chart;
  */
 const Polar = PolarArea;
 
-export * from './types';
-export * from './utils';
+export * from './types/index.js';
+export * from './utils/index.js';
 export {
   Chart,
   Base,

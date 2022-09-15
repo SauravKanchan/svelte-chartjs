@@ -1,9 +1,9 @@
 <script lang="ts">
   import type { DefaultDataPoint } from 'chart.js';
   import { Chart as ChartJS, LineController } from 'chart.js';
-  import type { ChartBaseProps } from './types';
+  import type { ChartBaseProps } from './types/index.js';
   import Chart from './Chart.svelte';
-  import { useForwardEvents } from './utils';
+  import { useForwardEvents } from './utils/index.js';
 
   interface $$Props<TData = DefaultDataPoint<'line'>, TLabel = unknown>
     extends Omit<ChartBaseProps<'line', TData, TLabel>, 'type'> {

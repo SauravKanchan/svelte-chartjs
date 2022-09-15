@@ -1,7 +1,9 @@
 import preprocess from 'svelte-preprocess';
 
-const config = {
+export default {
   preprocess: preprocess(),
+  package: {
+    source: 'src',
+    dir: 'package',
+  },
 };
-
-export default config;
