@@ -2,7 +2,7 @@
   "name": "bubble-chart",
   "dependencies": {
     "svelte": "^3.32.3",
-    "svelte-chartjs": "^2.0.0",
+    "svelte-chartjs": "^3.0.0",
     "chart.js": "^3.8.0"
   }
 }
