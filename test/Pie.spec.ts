@@ -1,7 +1,9 @@
-import { Pie } from '../src/index';
-import { data } from '../sandboxes/pie/components/data';
-
+import { describe, it, expect } from 'vitest';
 import { render } from '@testing-library/svelte';
+
+import 'chart.js/auto';
+import { Pie } from '../src/index.js';
+import { data } from '../sandboxes/pie/components/data.js';
 
 const options = {
   responsive: true,

@@ -1,2 +1,2 @@
-export * from './chart';
-export * from './html';
+export * from './chart.js';
+export * from './html.js';

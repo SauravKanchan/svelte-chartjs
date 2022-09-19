@@ -6,7 +6,7 @@ import type {
   Plugin,
   UpdateMode,
 } from 'chart.js';
-import type { HTMLAttributes } from './html';
+import type { HTMLAttributes } from './html.js';
 
 export interface ChartBaseProps<
   TType extends ChartType = ChartType,

@@ -1,7 +1,9 @@
-import { Line } from '../src/index';
-import { data } from '../sandboxes/line/components/data';
-
+import { describe, it, expect } from 'vitest';
 import { render } from '@testing-library/svelte';
+
+import 'chart.js/auto';
+import { Line } from '../src/index.js';
+import { data } from '../sandboxes/line/components/data.js';
 
 const options = {
   responsive: true,

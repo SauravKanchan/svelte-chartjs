@@ -1,7 +1,9 @@
-import { Bar } from '../src/index';
-import { data } from '../sandboxes/bar/components/data';
-
+import { describe, it, expect } from 'vitest';
 import { render } from '@testing-library/svelte';
+
+import 'chart.js/auto';
+import { Bar } from '../src/index.js';
+import { data } from '../sandboxes/bar/components/data.js';
 
 const options = {
   responsive: true,

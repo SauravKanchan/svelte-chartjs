@@ -2,8 +2,8 @@
   import { onMount, afterUpdate, onDestroy } from 'svelte';
   import type { ChartType, DefaultDataPoint } from 'chart.js';
   import { Chart as ChartJS } from 'chart.js';
-  import type { ChartBaseProps } from './types';
-  import { useForwardEvents } from './utils';
+  import type { ChartBaseProps } from './types/index.js';
+  import { useForwardEvents } from './utils/index.js';
 
   interface $$Props<
     TType extends ChartType = ChartType,

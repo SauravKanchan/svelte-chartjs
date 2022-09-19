@@ -1,9 +1,9 @@
 <script lang="ts">
   import type { DefaultDataPoint } from 'chart.js';
   import { Chart as ChartJS, RadarController } from 'chart.js';
-  import type { ChartBaseProps } from './types';
+  import type { ChartBaseProps } from './types/index.js';
   import Chart from './Chart.svelte';
-  import { useForwardEvents } from './utils';
+  import { useForwardEvents } from './utils/index.js';
 
   interface $$Props<TData = DefaultDataPoint<'radar'>, TLabel = unknown>
     extends Omit<ChartBaseProps<'radar', TData, TLabel>, 'type'> {
