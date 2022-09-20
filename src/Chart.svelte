@@ -45,7 +45,7 @@
     if (!chart) return;
 
     chart.data = data;
-    chart.options = options;
+    Object.assign(chart.options, options);
     chart.update(updateMode);
   });
 
