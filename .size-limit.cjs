@@ -16,7 +16,7 @@ module.exports = [
   },
   {
     path: 'package/index.js',
-    limit: '1.2 KB',
+    limit: '1.25 KB',
     import: '{ Bar }',
     modifyWebpackConfig
   },

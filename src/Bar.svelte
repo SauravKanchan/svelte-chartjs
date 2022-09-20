@@ -13,10 +13,12 @@
   ChartJS.register(BarController);
 
   export let chart: $$Props['chart'] = null;
-  let props = $$props as $$Props;
+  let props: $$Props;
   let baseChartRef: Chart;
 
   useForwardEvents(() => baseChartRef);
+
+  $: props = $$props as $$Props;
 </script>
 
 <Chart bind:this={baseChartRef} bind:chart type="bar" {...props} />
