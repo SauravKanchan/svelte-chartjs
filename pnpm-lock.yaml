@@ -36,7 +36,7 @@ specifiers:
   svelte-preprocess: ^4.10.7
   typescript: ^4.7.4
   vite: ^3.1.1
-  vitest: ^0.23.2
+  vitest: ^0.24.0
   vitest-canvas-mock: ^0.2.0
 
 devDependencies:
@@ -75,8 +75,8 @@ devDependencies:
   svelte-preprocess: 4.10.7_uslzfc62di2n2otc2tvfklnwji
   typescript: 4.7.4
   vite: 3.1.1
-  vitest: 0.23.2_jsdom@20.0.0
-  vitest-canvas-mock: 0.2.0_vitest@0.23.2
+  vitest: 0.24.0_jsdom@20.0.0
+  vitest-canvas-mock: 0.2.0_vitest@0.24.0
 
 packages:
 
@@ -3546,10 +3546,10 @@ packages:
       '@commitlint/execute-rule': 17.0.0
       '@commitlint/resolve-extends': 17.0.3
       '@commitlint/types': 17.0.0
-      '@types/node': 18.0.4
+      '@types/node': 18.7.18
       chalk: 4.1.2
       cosmiconfig: 7.0.1
-      cosmiconfig-typescript-loader: 2.0.2_2zqz24ol5yhbv2blv4fh7akzrq
+      cosmiconfig-typescript-loader: 2.0.2_nwm5gnmtj5mpwtqjmit2j7xbtu
       lodash: 4.17.21
       resolve-from: 5.0.0
       typescript: 4.7.4
@@ -5668,10 +5668,6 @@ packages:
     resolution: {integrity: sha512-6u+36Dj3aDzhfBVUf/mfmc92OEdzQ2kx2jcXGdigfl70E/neV21ZHE6UCz4MDzTRcVqGAM27fk+DLXvyDsn3Jw==}
     dev: true
 
-  /@types/node/18.0.4:
-    resolution: {integrity: sha512-M0+G6V0Y4YV8cqzHssZpaNCqvYwlCiulmm0PwpNLF55r/+cT8Ol42CHRU1SEaYFH2rTwiiE1aYg/2g2rrtGdPA==}
-    dev: true
-
   /@types/node/18.7.18:
     resolution: {integrity: sha512-m+6nTEOadJZuTPkKR/SYK3A2d7FZrgElol9UP1Kae90VVU4a6mxnPuLiIW1m4Cq4gZ/nWb9GrdVXJCoCazDAbg==}
     dev: true
@@ -5725,7 +5721,7 @@ packages:
   /@types/sass/1.43.1:
     resolution: {integrity: sha512-BPdoIt1lfJ6B7rw35ncdwBZrAssjcwzI5LByIrYs+tpXlj/CAkuVdRsgZDdP4lq5EjyWzwxZCqAoFyHKFwp32g==}
     dependencies:
-      '@types/node': 18.0.4
+      '@types/node': 18.7.18
     dev: true
 
   /@types/scheduler/0.16.2:
@@ -7930,16 +7926,16 @@ packages:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
     dev: true
 
-  /cosmiconfig-typescript-loader/2.0.2_2zqz24ol5yhbv2blv4fh7akzrq:
+  /cosmiconfig-typescript-loader/2.0.2_nwm5gnmtj5mpwtqjmit2j7xbtu:
     resolution: {integrity: sha512-KmE+bMjWMXJbkWCeY4FJX/npHuZPNr9XF9q9CIQ/bpFwi1qHfCmSiKarrCcRa0LO4fWjk93pVoeRtJAkTGcYNw==}
     engines: {node: '>=12', npm: '>=6'}
     peerDependencies:
       '@types/node': '*'
       typescript: '>=3'
     dependencies:
-      '@types/node': 18.0.4
+      '@types/node': 18.7.18
       cosmiconfig: 7.0.1
-      ts-node: 10.9.1_2zqz24ol5yhbv2blv4fh7akzrq
+      ts-node: 10.9.1_nwm5gnmtj5mpwtqjmit2j7xbtu
       typescript: 4.7.4
     transitivePeerDependencies:
       - '@swc/core'
@@ -14610,8 +14606,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /strip-literal/0.4.1:
-    resolution: {integrity: sha512-z+F/xmDM8GOdvA5UoZXFxEnxdvMOZ+XEBIwjfLfc8hMSuHpGxjXAUCfuEo+t1GOHSb8+qgI/IBRpxXVMaABYWA==}
+  /strip-literal/0.4.2:
+    resolution: {integrity: sha512-pv48ybn4iE1O9RLgCAN0iU4Xv7RlBTiit6DKmMiErbs9x1wH6vXBs45tWc0H5wUIF6TLTrKweqkmYF/iraQKNw==}
     dependencies:
       acorn: 8.8.0
     dev: true
@@ -14995,8 +14991,8 @@ packages:
       setimmediate: 1.0.5
     dev: true
 
-  /tinybench/2.1.5:
-    resolution: {integrity: sha512-ak+PZZEuH3mw6CCFOgf5S90YH0MARnZNhxjhjguAmoJimEMAJuNip/rJRd6/wyylHItomVpKTzZk9zrhTrQCoQ==}
+  /tinybench/2.3.0:
+    resolution: {integrity: sha512-zs1gMVBwyyG2QbVchYIbnabRhMOCGvrwZz/q+SV+LIMa9q5YDQZi2kkI6ZRqV2Bz7ba1uvrc7ieUoE4KWnGeKg==}
     dev: true
 
   /tinypool/0.3.0:
@@ -15120,7 +15116,7 @@ packages:
     engines: {node: '>=6.10'}
     dev: true
 
-  /ts-node/10.9.1_2zqz24ol5yhbv2blv4fh7akzrq:
+  /ts-node/10.9.1_nwm5gnmtj5mpwtqjmit2j7xbtu:
     resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
     hasBin: true
     peerDependencies:
@@ -15139,7 +15135,7 @@ packages:
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.3
-      '@types/node': 18.0.4
+      '@types/node': 18.7.18
       acorn: 8.8.0
       acorn-walk: 8.2.0
       arg: 4.1.3
@@ -15666,13 +15662,13 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest-canvas-mock/0.2.0_vitest@0.23.2:
+  /vitest-canvas-mock/0.2.0_vitest@0.24.0:
     resolution: {integrity: sha512-ofAkKIaK74Na2lzCdbiT2kZxYRsxWZhCm2UN0ahvfsgzFCQ3Qqkvzb7fgfkS801rL5papzDrTK4KfuU1+u4UCg==}
     peerDependencies:
       vitest: '*'
     dependencies:
       jest-canvas-mock: 2.4.0
-      vitest: 0.23.2_jsdom@20.0.0
+      vitest: 0.24.0_jsdom@20.0.0
     dev: true
 
   /vitest/0.23.2_jsdom@20.0.0:
@@ -15704,8 +15700,50 @@ packages:
       debug: 4.3.4
       jsdom: 20.0.0
       local-pkg: 0.4.2
-      strip-literal: 0.4.1
-      tinybench: 2.1.5
+      strip-literal: 0.4.2
+      tinybench: 2.3.0
+      tinypool: 0.3.0
+      tinyspy: 1.0.2
+      vite: 3.1.1
+    transitivePeerDependencies:
+      - less
+      - sass
+      - stylus
+      - supports-color
+      - terser
+    dev: true
+
+  /vitest/0.24.0_jsdom@20.0.0:
+    resolution: {integrity: sha512-k5j3FPTor+MJx2x0pDW2gtVk+s9VC6nSHT3SoqOIk9Je5fFpPgict+Xy2eAVXUogvSixs45Ya1oZk+oK93BO0w==}
+    engines: {node: '>=v14.16.0'}
+    hasBin: true
+    peerDependencies:
+      '@edge-runtime/vm': '*'
+      '@vitest/browser': '*'
+      '@vitest/ui': '*'
+      happy-dom: '*'
+      jsdom: '*'
+    peerDependenciesMeta:
+      '@edge-runtime/vm':
+        optional: true
+      '@vitest/browser':
+        optional: true
+      '@vitest/ui':
+        optional: true
+      happy-dom:
+        optional: true
+      jsdom:
+        optional: true
+    dependencies:
+      '@types/chai': 4.3.3
+      '@types/chai-subset': 1.3.3
+      '@types/node': 18.7.18
+      chai: 4.3.6
+      debug: 4.3.4
+      jsdom: 20.0.0
+      local-pkg: 0.4.2
+      strip-literal: 0.4.2
+      tinybench: 2.3.0
       tinypool: 0.3.0
       tinyspy: 1.0.2
       vite: 3.1.1
