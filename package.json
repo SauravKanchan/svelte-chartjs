@@ -59,7 +59,7 @@
     "@testing-library/svelte": "^3.2.1",
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "@typescript-eslint/parser": "^5.30.6",
-    "@vitest/coverage-c8": "^0.23.2",
+    "@vitest/coverage-c8": "^0.24.0",
     "chart.js": "^3.8.0",
     "clean-publish": "^4.0.1",
     "commitizen": "^4.2.4",
