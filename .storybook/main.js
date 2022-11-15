@@ -1,15 +1,22 @@
 const path = require('path');
-const ResolveTypeScriptPlugin = require('resolve-typescript-plugin');
+const { mergeConfig } = require('vite');
+const preprocess = require('svelte-preprocess');
 
 module.exports = {
-  webpackFinal: async config => {
-    const svelteLoader = config.module.rules.find(
-      r => r.loader && r.loader.includes('svelte-loader')
-    );
-    svelteLoader.options.preprocess = require('svelte-preprocess')({});
-    config.resolve.alias['svelte-chartjs'] = path.resolve(__dirname, '../src');
-    config.resolve.plugins.push(new ResolveTypeScriptPlugin());
-    return config;
+  core: {
+    builder: '@storybook/builder-vite',
+  },
+  viteFinal(config) {
+    return mergeConfig(config, {
+      resolve: {
+        alias: {
+          'svelte-chartjs': path.resolve(__dirname, '../src'),
+        },
+      },
+    });
+  },
+  svelteOptions: {
+    preprocess: preprocess(),
   },
   stories: ['../stories/*.stories.(js|ts)'],
   addons: ['@storybook/addon-essentials'],
