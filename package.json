@@ -43,7 +43,7 @@
     "updateGitHooks": "simple-git-hooks"
   },
   "peerDependencies": {
-    "chart.js": "^3.5.0",
+    "chart.js": "^3.5.0 || ^4.0.0",
     "svelte": "^3.45.0"
   },
   "devDependencies": {
@@ -52,7 +52,14 @@
     "@commitlint/cz-commitlint": "^17.0.0",
     "@size-limit/preset-big-lib": "^8.0.0",
     "@storybook/addon-actions": "^6.5.9",
+    "@storybook/addon-backgrounds": "^6.5.13",
+    "@storybook/addon-docs": "^6.5.13",
     "@storybook/addon-essentials": "^6.5.9",
+    "@storybook/addon-measure": "^6.5.13",
+    "@storybook/addon-outline": "^6.5.13",
+    "@storybook/builder-vite": "^0.2.5",
+    "@storybook/client-api": "^6.5.13",
+    "@storybook/client-logger": "^6.5.13",
     "@storybook/svelte": "^6.5.9",
     "@sveltejs/package": "^1.0.0-next.3",
     "@sveltejs/vite-plugin-svelte": "^1.0.5",
@@ -60,7 +67,7 @@
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "@typescript-eslint/parser": "^5.30.6",
     "@vitest/coverage-c8": "^0.25.0",
-    "chart.js": "^3.8.0",
+    "chart.js": "^4.0.0",
     "clean-publish": "^4.0.1",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
@@ -72,7 +79,8 @@
     "nano-staged": "^0.8.0",
     "prettier": "^2.7.1",
     "prettier-plugin-svelte": "^2.7.0",
-    "resolve-typescript-plugin": "^1.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "simple-git-hooks": "^2.8.0",
     "simple-github-release": "^1.0.0",
     "size-limit": "^8.0.0",
