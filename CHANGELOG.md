@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.1.0](https://github.com/SauravKanchan/svelte-chartjs/compare/v3.0.1...v3.1.0) (2022-11-17)
+
+
+### Features
+
+* add chart.js v4 support ([#86](https://github.com/SauravKanchan/svelte-chartjs/issues/86)) ([cbc497c](https://github.com/SauravKanchan/svelte-chartjs/commit/cbc497c020b3e810acef8d0fb7a6cbe68d77e0f7))
+
+
+### Bug Fixes
+
+* **deps:** update dependency chart.js to v4 ([#84](https://github.com/SauravKanchan/svelte-chartjs/issues/84)) ([112b2fa](https://github.com/SauravKanchan/svelte-chartjs/commit/112b2faca1e383db4b14ed5c9578a1d1ec0ff538))
+
 ### [3.0.1](https://github.com/SauravKanchan/svelte-chartjs/compare/v3.0.0...v3.0.1) (2022-09-20)
 
 
