@@ -1,8 +1,16 @@
 {
   "name": "scatter-chart",
+  "type": "module",
+  "scripts": {
+    "start": "vite"
+  },
   "dependencies": {
     "svelte": "^3.32.3",
     "svelte-chartjs": "^3.0.0",
     "chart.js": "^4.0.0"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^1.3.1",
+    "vite": "^3.2.4"
   }
 }
