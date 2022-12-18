@@ -9,6 +9,7 @@ module.exports = {
   viteFinal(config) {
     return mergeConfig(config, {
       resolve: {
+        dedupe: ['@storybook/client-api'],
         alias: {
           'svelte-chartjs': path.resolve(__dirname, '../src'),
         },
