@@ -57,7 +57,7 @@
     "@storybook/addon-essentials": "^6.5.9",
     "@storybook/addon-measure": "^6.5.13",
     "@storybook/addon-outline": "^6.5.13",
-    "@storybook/builder-vite": "^0.2.6",
+    "@storybook/builder-vite": "^0.3.0",
     "@storybook/client-api": "^6.5.13",
     "@storybook/client-logger": "^6.5.13",
     "@storybook/svelte": "^6.5.14",
