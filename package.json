@@ -8,12 +8,6 @@
   "publishConfig": {
     "directory": "package"
   },
-  "files": [
-    "**/*.js",
-    "**/*.ts",
-    "**/*.svelte",
-    "**/*.map"
-  ],
   "keywords": [
     "svelte",
     "chartjs"
