@@ -60,7 +60,7 @@
     "@testing-library/svelte": "^3.2.1",
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "@typescript-eslint/parser": "^5.30.6",
-    "@vitest/coverage-c8": "^0.25.8",
+    "@vitest/coverage-c8": "^0.27.0",
     "chart.js": "^4.0.0",
     "clean-publish": "^4.0.1",
     "commitizen": "^4.2.4",
@@ -84,7 +84,7 @@
     "svelte-preprocess": "^5.0.0",
     "typescript": "^4.9.4",
     "vite": "^4.0.2",
-    "vitest": "^0.25.8",
+    "vitest": "^0.27.0",
     "vitest-canvas-mock": "^0.2.2"
   }
 }
