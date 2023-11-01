@@ -38,7 +38,7 @@
   },
   "peerDependencies": {
     "chart.js": "^3.5.0 || ^4.0.0",
-    "svelte": "^3.45.0"
+    "svelte": "^4.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.2",
@@ -79,7 +79,7 @@
     "simple-github-release": "^1.0.0",
     "size-limit": "^8.0.0",
     "standard-version": "^9.5.0",
-    "svelte": "^3.55.1",
+    "svelte": "^4.0.0",
     "svelte-loader": "^3.1.5",
     "svelte-preprocess": "^5.0.0",
     "typescript": "^4.9.4",
