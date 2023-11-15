@@ -55,7 +55,7 @@
     "@storybook/client-api": "^6.5.13",
     "@storybook/client-logger": "^6.5.13",
     "@storybook/svelte": "^6.5.14",
-    "@sveltejs/package": "^1.0.1",
+    "@sveltejs/package": "^2.0.0",
     "@sveltejs/vite-plugin-svelte": "^2.0.2",
     "@testing-library/svelte": "^3.2.1",
     "@typescript-eslint/eslint-plugin": "^5.30.6",

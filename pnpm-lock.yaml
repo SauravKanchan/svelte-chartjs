@@ -48,8 +48,8 @@ devDependencies:
     specifier: ^6.5.14
     version: 6.5.14(@babel/core@7.20.5)(eslint@8.19.0)(svelte-loader@3.1.5)(svelte@4.2.2)(typescript@4.9.4)
   '@sveltejs/package':
-    specifier: ^1.0.1
-    version: 1.0.2(svelte@4.2.2)(typescript@4.9.4)
+    specifier: ^2.0.0
+    version: 2.2.2(svelte@4.2.2)(typescript@4.9.4)
   '@sveltejs/vite-plugin-svelte':
     specifier: ^2.0.2
     version: 2.0.2(svelte@4.2.2)(vite@4.0.5)
@@ -4734,18 +4734,19 @@ packages:
       resolve-from: 5.0.0
     dev: true
 
-  /@sveltejs/package@1.0.2(svelte@4.2.2)(typescript@4.9.4):
-    resolution: {integrity: sha512-VY9U+05d9uNFDj7ScKRlHORYlfPSHwJewBjV+V2RsnViexpLFPUrboC9SiPYDCpLnbeqwXerxhO6twGHUBGeIA==}
+  /@sveltejs/package@2.2.2(svelte@4.2.2)(typescript@4.9.4):
+    resolution: {integrity: sha512-rP3sVv6cAntcdcG4r4KspLU6nZYYUrHJBAX3Arrw0KJFdgxtlsi2iDwN0Jwr/vIkgjcU0ZPWM8kkT5kpZDlWAw==}
     engines: {node: ^16.14 || >=18}
     hasBin: true
     peerDependencies:
-      svelte: ^3.44.0
+      svelte: ^3.44.0 || ^4.0.0
     dependencies:
       chokidar: 3.5.3
       kleur: 4.1.5
       sade: 1.8.1
+      semver: 7.5.4
       svelte: 4.2.2
-      svelte2tsx: 0.6.0(svelte@4.2.2)(typescript@4.9.4)
+      svelte2tsx: 0.6.25(svelte@4.2.2)(typescript@4.9.4)
     transitivePeerDependencies:
       - typescript
     dev: true
@@ -5166,7 +5167,7 @@ packages:
       debug: 4.3.4
       globby: 11.1.0
       is-glob: 4.0.3
-      semver: 7.3.7
+      semver: 7.3.8
       tsutils: 3.21.0(typescript@4.9.4)
       typescript: 4.9.4
     transitivePeerDependencies:
@@ -12295,6 +12296,7 @@ packages:
 
   /path-dirname@1.0.2:
     resolution: {integrity: sha512-ALzNPpyNq9AqXMBjeymIjFDAkAFH06mHJH/cSBHAgU0s4vfpBn6b2nf8tiRLvagKD8RbTpq2FKTBg7cl9l3c7Q==}
+    requiresBuild: true
     dev: true
 
   /path-exists@2.1.0:
@@ -13631,6 +13633,14 @@ packages:
       lru-cache: 6.0.0
     dev: true
 
+  /semver@7.5.4:
+    resolution: {integrity: sha512-1bCSESV6Pv+i21Hvpxp3Dx+pSD8lIPt8uVjRrxAUt/nbswYc+tK6Y2btiULjd4+fnq15PX+nqQDC7Oft7WkwcA==}
+    engines: {node: '>=10'}
+    hasBin: true
+    dependencies:
+      lru-cache: 6.0.0
+    dev: true
+
   /send@0.18.0:
     resolution: {integrity: sha512-qqWzuOjSFOuqPjFe4NOsMLafToQQwBSOEpS+FwEt3A2V3vKubTquT3vmLTQpFgMXp8AlFWFuP1qKaJZOtPpVXg==}
     engines: {node: '>= 0.8.0'}
@@ -14412,11 +14422,11 @@ packages:
       typescript: 4.9.4
     dev: true
 
-  /svelte2tsx@0.6.0(svelte@4.2.2)(typescript@4.9.4):
-    resolution: {integrity: sha512-TrxfQkO7CKi8Pu2eC/FyteDCdk3OOeQV5u6z7OjYAsOhsd0ClzAKqxJdvp6xxNQLrbFzf/XvCi9Fy8MQ1MleFA==}
+  /svelte2tsx@0.6.25(svelte@4.2.2)(typescript@4.9.4):
+    resolution: {integrity: sha512-hhBKL5X9gGvKQAZ9xLoHnbE9Yb00HxEZJlxcj2drxWK+Tpqcs/bnodjSfCGbqEhvNaUXYNbVL7s4dEXT+o0f6w==}
     peerDependencies:
-      svelte: ^3.55
-      typescript: ^4.9.4
+      svelte: ^3.55 || ^4.0.0-next.0 || ^4.0 || ^5.0.0-next.0
+      typescript: ^4.9.4 || ^5.0.0
     dependencies:
       dedent-js: 1.0.1
       pascal-case: 3.1.2
