@@ -5,7 +5,7 @@
     "start": "vite"
   },
   "dependencies": {
-    "svelte": "^3.32.3",
+    "svelte": "^4.0.0",
     "svelte-chartjs": "^3.0.0",
     "chart.js": "^4.0.0"
   },
