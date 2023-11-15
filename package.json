@@ -57,7 +57,7 @@
     "@storybook/svelte": "^6.5.14",
     "@sveltejs/package": "^1.0.1",
     "@sveltejs/vite-plugin-svelte": "^2.0.2",
-    "@testing-library/svelte": "^3.2.1",
+    "@testing-library/svelte": "^4.0.0",
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "@typescript-eslint/parser": "^5.30.6",
     "@vitest/coverage-c8": "^0.27.0",
