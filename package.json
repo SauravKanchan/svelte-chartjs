@@ -86,5 +86,11 @@
     "vite": "^4.0.5",
     "vitest": "^0.27.0",
     "vitest-canvas-mock": "^0.2.2"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/types/index.ts",
+      "svelte": "./src/index.ts"
+    }
   }
 }
