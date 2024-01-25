@@ -4,13 +4,15 @@ import { svelte } from '@sveltejs/vite-plugin-svelte';
 export default defineConfig({
   plugins: [svelte()],
   test: {
+    globals: true,
     environment: 'jsdom',
-    setupFiles: ['test/setup.js'],
-    deps: {
-      inline: ['vitest-canvas-mock'],
-    },
-    coverage: {
-      reporter: ['lcovonly', 'text'],
-    },
+    include: ['./test/**/*.spec.ts'],
+    setupFiles: ['./test/setup.js'],
+    alias: [
+      {
+        find: /^svelte$/,
+        replacement: 'svelte/internal',
+      },
+    ],
   },
 });

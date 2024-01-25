@@ -1,16 +1,30 @@
 {
   "name": "svelte-chartjs",
-  "type": "module",
   "version": "3.1.2",
   "author": "Saurav Kanchan",
   "homepage": "https://saurav.tech/mdbsvelte/?path=/story/charts--examples",
   "license": "MIT",
-  "publishConfig": {
-    "directory": "package"
-  },
   "keywords": [
     "svelte",
     "chartjs"
+  ],
+  "type": "module",
+  "types": "./dist/types/index.d.ts",
+  "svelte": "./dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "svelte": "./dist/index.js",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "directory": "dist"
+  },
+  "files": [
+    "dist",
+    "src"
   ],
   "repository": {
     "type": "git",
@@ -20,17 +34,18 @@
     "url": "https://github.com/SauravKanchan/svelte-chartjs"
   },
   "scripts": {
-    "build": "del ./package && svelte-package && clear-package-json package/package.json -o package/package.json",
+    "build": "svelte-package --input ./src && pnpm lint:package",
     "prepublishOnly": "pnpm test && pnpm build",
-    "postpublish": "del ./package",
+    "postpublish": "del ./dist",
     "commit": "cz",
     "format": "prettier --write 'src/**/*.{js,ts,svelte}'",
     "test:lint": "eslint src --ext .js,.svelte",
     "test:size": "size-limit",
     "test:unit": "vitest run --coverage",
     "test": "pnpm test:lint && pnpm test:unit",
-    "start:storybook": "start-storybook -p 6006 --ci",
-    "build:storybook": "del ./storybook-static; NODE_ENV=production build-storybook",
+    "lint:package": "publint --strict",
+    "start:storybook": "storybook dev -p 6006",
+    "build:storybook": "del ./storybook-static; NODE_ENV=production storybook build -o ./storybook-static",
     "bumpVersion": "standard-version",
     "createGithubRelease": "simple-github-release",
     "release": "pnpm bumpVersion && git push origin master --tags && pnpm createGithubRelease",
@@ -45,24 +60,25 @@
     "@commitlint/config-conventional": "^17.0.2",
     "@commitlint/cz-commitlint": "^17.0.0",
     "@size-limit/preset-big-lib": "^8.0.0",
-    "@storybook/addon-actions": "^6.5.9",
-    "@storybook/addon-backgrounds": "^6.5.13",
-    "@storybook/addon-docs": "^6.5.13",
-    "@storybook/addon-essentials": "^6.5.9",
-    "@storybook/addon-measure": "^6.5.13",
-    "@storybook/addon-outline": "^6.5.13",
-    "@storybook/builder-vite": "^0.3.0",
-    "@storybook/client-api": "^6.5.13",
-    "@storybook/client-logger": "^6.5.13",
-    "@storybook/svelte": "^6.5.14",
-    "@sveltejs/package": "^1.0.1",
-    "@sveltejs/vite-plugin-svelte": "^2.0.2",
-    "@testing-library/svelte": "^3.2.1",
+    "@storybook/addon-actions": "^7.6.10",
+    "@storybook/addon-backgrounds": "^7.6.10",
+    "@storybook/addon-docs": "^7.6.10",
+    "@storybook/addon-essentials": "^7.6.10",
+    "@storybook/addon-measure": "^7.6.10",
+    "@storybook/addon-outline": "^7.6.10",
+    "@storybook/builder-vite": "^7.6.10",
+    "@storybook/client-api": "^7.6.10",
+    "@storybook/client-logger": "^7.6.10",
+    "@storybook/svelte": "^7.6.10",
+    "@storybook/svelte-vite": "^7.6.10",
+    "@sveltejs/package": "^2.2.4",
+    "@sveltejs/vite-plugin-svelte": "^3.0.1",
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/svelte": "^4.0.5",
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "@typescript-eslint/parser": "^5.30.6",
-    "@vitest/coverage-c8": "^0.27.0",
+    "@vitest/coverage-v8": "^1.2.1",
     "chart.js": "^4.1.2",
-    "clean-publish": "^4.0.1",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
     "del-cli": "^5.0.0",
@@ -73,18 +89,20 @@
     "nano-staged": "^0.8.0",
     "prettier": "^2.7.1",
     "prettier-plugin-svelte": "^2.7.0",
+    "publint": "^0.2.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "simple-git-hooks": "^2.8.0",
     "simple-github-release": "^1.0.0",
     "size-limit": "^8.0.0",
     "standard-version": "^9.5.0",
+    "storybook": "^7.6.10",
     "svelte": "^4.0.0",
     "svelte-loader": "^3.1.5",
     "svelte-preprocess": "^5.0.0",
     "typescript": "^4.9.4",
-    "vite": "^4.0.5",
-    "vitest": "^0.27.0",
-    "vitest-canvas-mock": "^0.2.2"
+    "vite": "^5.0.12",
+    "vitest": "^1.2.1",
+    "vitest-canvas-mock": "^0.3.3"
   }
 }
