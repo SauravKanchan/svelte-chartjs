@@ -1,12 +1,15 @@
 {
   "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "svelte3",
-    "@typescript-eslint"
-  ],
+  "plugins": ["vitest", "@typescript-eslint"],
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module",
+    "extraFileExtensions": [".svelte"]
+  },
   "extends": [
     "eslint:recommended",
     "plugin:import/recommended",
+    "plugin:svelte/recommended",
     "plugin:@typescript-eslint/recommended"
   ],
   "env": {
@@ -15,39 +18,24 @@
   },
   "overrides": [
     {
-      "files": [
-        "**/*.svelte"
-      ],
-      "processor": "svelte3/svelte3",
+      "files": ["*.svelte"],
+      "parser": "svelte-eslint-parser",
       "rules": {
         "no-undef": "off"
+      },
+      "parserOptions": {
+        "parser": "@typescript-eslint/parser"
       }
     }
   ],
-  "parserOptions": {
-    "ecmaVersion": 2019,
-    "sourceType": "module"
-  },
   "rules": {
     "arrow-parens": 0,
-    "curly": [
-      2,
-      "multi-line"
-    ],
-    "quotes": [
-      2,
-      "single",
-      "avoid-escape"
-    ],
-    "semi": [
-      2,
-      "always"
-    ],
+    "curly": [2, "multi-line"],
+    "quotes": [2, "single", "avoid-escape"],
+    "semi": [2, "always"],
     "strict": 0,
     "no-use-before-define": 0,
-    "import/no-unresolved": 0
-  },
-  "settings": {
-    "svelte3/typescript": true
+    "import/no-unresolved": 0,
+    "no-inner-declarations": 0
   }
 }
