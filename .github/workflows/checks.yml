@@ -22,7 +22,7 @@ jobs:
           cache: 'pnpm'
           registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
+        run: pnpm install
       - name: Check size
         run: pnpm build && pnpm test:size
   storybook:
@@ -31,7 +31,7 @@ jobs:
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v4
-      - name: Install pnpm --no-frozen-lockfile
+      - name: Install pnpm
         uses: pnpm/action-setup@v2
         with:
           version: 8
@@ -42,7 +42,7 @@ jobs:
           cache: 'pnpm'
           registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
+        run: pnpm install
       - name: Check storybook
         run: pnpm build:storybook
   editorconfig:
