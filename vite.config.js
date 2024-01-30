@@ -4,13 +4,13 @@ import { svelte } from '@sveltejs/vite-plugin-svelte';
 export default defineConfig({
   plugins: [svelte()],
   test: {
+    dir: './',
     environment: 'jsdom',
-    setupFiles: ['test/setup.js'],
-    deps: {
-      inline: ['vitest-canvas-mock'],
-    },
+    include: ['./test/*.spec.ts'],
+    setupFiles: ['./test/setup.js'],
     coverage: {
-      reporter: ['lcovonly', 'text'],
+      include: ['src'],
+      reporters: ['lcovonly', 'text'],
     },
   },
 });

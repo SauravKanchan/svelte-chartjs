@@ -1,10 +1,15 @@
-const path = require('path');
-const { mergeConfig } = require('vite');
-const preprocess = require('svelte-preprocess');
+import path from 'path';
+import preprocess from 'svelte-preprocess';
+import { mergeConfig } from 'vite';
 
-module.exports = {
-  core: {
-    builder: '@storybook/builder-vite',
+export default {
+  stories: ['../stories/*.stories.@(js|ts)'],
+  addons: ['@storybook/addon-essentials'],
+  framework: {
+    name: '@storybook/svelte-vite',
+    options: {
+      preprocess: preprocess(),
+    },
   },
   viteFinal(config) {
     return mergeConfig(config, {
@@ -16,10 +21,4 @@ module.exports = {
       },
     });
   },
-  svelteOptions: {
-    preprocess: preprocess(),
-  },
-  stories: ['../stories/*.stories.(js|ts)'],
-  addons: ['@storybook/addon-essentials'],
-  framework: '@storybook/svelte',
 };

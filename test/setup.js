@@ -1,5 +1,10 @@
+import { afterEach, vi } from 'vitest';
+import { cleanup } from '@testing-library/svelte';
+
+import '@testing-library/jest-dom/vitest';
 import 'vitest-canvas-mock';
-import { vi } from 'vitest';
+
+afterEach(cleanup);
 
 window.ResizeObserver =
   window.ResizeObserver ||

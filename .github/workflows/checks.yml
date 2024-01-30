@@ -9,17 +9,18 @@ jobs:
     name: Checking size
     if: "!contains(github.event.head_commit.message, '[ci skip]')"
     steps:
-      - name: Checkout the repository
+      - name: Checkout repository
         uses: actions/checkout@v3
       - name: Install pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 7
-      - name: Install Node.js
+          version: 8.11
+      - name: Install Node
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 20
           cache: 'pnpm'
+          registry-url: 'https://registry.npmjs.org'
       - name: Check size
         uses: andresz1/size-limit-action@master
         with:
@@ -33,12 +34,13 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 7
-      - name: Install Node.js
+          version: 8.11
+      - name: Install Node
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 20
           cache: 'pnpm'
+          registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies
         run: pnpm install
       - name: Check storybook
