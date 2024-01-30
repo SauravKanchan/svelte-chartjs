@@ -24,9 +24,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
       - name: Check size
-        uses: andresz1/size-limit-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+        run: pnpm build && pnpm test:size
   storybook:
     runs-on: ubuntu-latest
     name: storybook
