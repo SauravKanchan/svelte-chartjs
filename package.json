@@ -19,9 +19,6 @@
     },
     "./package.json": "./package.json"
   },
-  "publishConfig": {
-    "directory": "dist"
-  },
   "files": [
     "dist",
     "src"
@@ -35,8 +32,6 @@
   },
   "scripts": {
     "build": "svelte-package --input ./src && pnpm lint:package",
-    "prepublishOnly": "pnpm test && pnpm build",
-    "postpublish": "del ./dist",
     "commit": "cz",
     "format": "prettier --write 'src/**/*.{js,ts,svelte}'",
     "test:lint": "eslint src --ext .js,.svelte",
