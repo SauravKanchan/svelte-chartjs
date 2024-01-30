@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "svelte": "^4.0.0",
-    "svelte-chartjs": "^3.0.0",
+    "svelte-chartjs": "../../",
     "chart.js": "^4.0.0"
   },
   "devDependencies": {
