@@ -88,7 +88,7 @@
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-svelte": "^2.35.1",
     "eslint-plugin-vitest": "^0.3.20",
-    "jsdom": "^21.0.0",
+    "jsdom": "^24.0.0",
     "nano-staged": "^0.8.0",
     "prettier": "^3.1.0",
     "prettier-plugin-svelte": "^3.1.2",
