@@ -19,6 +19,9 @@
     },
     "./package.json": "./package.json"
   },
+  "publishConfig": {
+    "directory": "dist"
+  },
   "files": [
     "dist",
     "src"
