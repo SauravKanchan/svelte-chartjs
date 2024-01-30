@@ -24,7 +24,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Check size
-        run: pnpm build && pnpm test:size
+        uses: andresz1/size-limit-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
   storybook:
     runs-on: ubuntu-latest
     name: storybook
