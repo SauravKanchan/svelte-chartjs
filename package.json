@@ -92,7 +92,7 @@
     "react-dom": "^18.2.0",
     "simple-git-hooks": "^2.8.0",
     "simple-github-release": "^1.0.0",
-    "size-limit": "^8.0.0",
+    "size-limit": "^11.0.0",
     "standard-version": "^9.5.0",
     "storybook": "^7.6.10",
     "svelte": "^4.2.9",
