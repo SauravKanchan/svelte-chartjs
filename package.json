@@ -9,11 +9,11 @@
     "chartjs"
   ],
   "type": "module",
-  "types": "./dist/types/index.d.ts",
+  "types": "./dist/index.d.ts",
   "svelte": "./dist/index.js",
   "exports": {
     ".": {
-      "types": "./dist/types/index.d.ts",
+      "types": "./dist/index.d.ts",
       "svelte": "./dist/index.js",
       "import": "./dist/index.js"
     },
