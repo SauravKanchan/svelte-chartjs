@@ -54,7 +54,7 @@
     "@commitlint/cli": "^18.0.0",
     "@commitlint/config-conventional": "^18.0.0",
     "@commitlint/cz-commitlint": "^18.0.0",
-    "@size-limit/preset-big-lib": "^8.0.0",
+    "@size-limit/preset-big-lib": "^11.0.0",
     "@storybook/addon-actions": "^7.6.10",
     "@storybook/addon-backgrounds": "^7.6.10",
     "@storybook/addon-docs": "^7.6.10",
