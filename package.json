@@ -48,7 +48,7 @@
   },
   "peerDependencies": {
     "chart.js": "^3.5.0 || ^4.0.0",
-    "svelte": "^4.0.0"
+    "svelte": "^4.2.19"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.0.0",
