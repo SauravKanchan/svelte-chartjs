@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { render } from '@testing-library/svelte';
+import { render } from '@testing-library/svelte/svelte5';
 
 import 'chart.js/auto';
 import { Scatter } from '../src/index.js';
@@ -16,7 +16,6 @@ describe('Scatter Chart', () => {
   it('should render a canvas', () => {
     const { container } = render(Scatter);
     const canvas = container.querySelector('canvas');
-
     expect(canvas).not.toBeNull();
   });
 
@@ -27,7 +26,7 @@ describe('Scatter Chart', () => {
   });
 
   it('should pass options prop', () => {
-    const component = render(Scatter, { props: { options } });
+    const component = render(Scatter, { props: { data, options } });
 
     expect(() => component).not.toThrow();
   });
