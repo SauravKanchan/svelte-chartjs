@@ -60,8 +60,8 @@ devDependencies:
     specifier: ^6.1.4
     version: 6.4.0(vitest@1.2.2)
   '@testing-library/svelte':
-    specifier: ^4.0.5
-    version: 4.1.0(svelte@4.2.9)
+    specifier: ^5.0.0
+    version: 5.3.1(svelte@4.2.9)(vite@5.0.12)(vitest@1.2.2)
   '@tsconfig/svelte':
     specifier: ^5.0.2
     version: 5.0.2
@@ -3959,14 +3959,33 @@ packages:
       vitest: 1.2.2(@types/node@20.11.11)(jsdom@24.0.0)
     dev: true
 
-  /@testing-library/svelte@4.1.0(svelte@4.2.9):
-    resolution: {integrity: sha512-MJqe7x9WowkiAVdk9mvazEC2ktFZdmK2OqFVoO557PC37aBemQ4ozqdK3yrG34Zg9kuln3qgTVeLSh08e69AMw==}
+  /@testing-library/svelte-core@1.0.0(svelte@4.2.9):
+    resolution: {integrity: sha512-VkUePoLV6oOYwSUvX6ShA8KLnJqZiYMIbP2JW2t0GLWLkJxKGvuH5qrrZBV/X7cXFnLGuFQEC7RheYiZOW68KQ==}
+    engines: {node: '>=16'}
+    peerDependencies:
+      svelte: ^3 || ^4 || ^5 || ^5.0.0-next.0
+    dependencies:
+      svelte: 4.2.9
+    dev: true
+
+  /@testing-library/svelte@5.3.1(svelte@4.2.9)(vite@5.0.12)(vitest@1.2.2):
+    resolution: {integrity: sha512-8Ez7ZOqW5geRf9PF5rkuopODe5RGy3I9XR+kc7zHh26gBiktLaxTfKmhlGaSHYUOTQE7wFsLMN9xCJVCszw47w==}
     engines: {node: '>= 10'}
     peerDependencies:
-      svelte: ^3 || ^4
+      svelte: ^3 || ^4 || ^5 || ^5.0.0-next.0
+      vite: '*'
+      vitest: '*'
+    peerDependenciesMeta:
+      vite:
+        optional: true
+      vitest:
+        optional: true
     dependencies:
       '@testing-library/dom': 9.3.4
+      '@testing-library/svelte-core': 1.0.0(svelte@4.2.9)
       svelte: 4.2.9
+      vite: 5.0.12(@types/node@20.11.11)
+      vitest: 1.2.2(@types/node@20.11.11)(jsdom@24.0.0)
     dev: true
 
   /@tsconfig/svelte@5.0.2:

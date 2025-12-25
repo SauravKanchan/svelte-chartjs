@@ -69,7 +69,7 @@
     "@sveltejs/package": "^2.2.4",
     "@sveltejs/vite-plugin-svelte": "^3.0.2",
     "@testing-library/jest-dom": "^6.1.4",
-    "@testing-library/svelte": "^4.0.5",
+    "@testing-library/svelte": "^5.0.0",
     "@tsconfig/svelte": "^5.0.2",
     "@types/node": "^20.11.10",
     "@typescript-eslint/eslint-plugin": "^7.0.0",
