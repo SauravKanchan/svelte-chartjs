@@ -2,6 +2,7 @@
   "name": "scatter-chart",
   "type": "module",
   "scripts": {
+    "dev": "vite",
     "start": "vite"
   },
   "dependencies": {
