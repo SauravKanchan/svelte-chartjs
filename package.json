@@ -94,7 +94,7 @@
     "simple-github-release": "^1.0.0",
     "size-limit": "^8.0.0",
     "standard-version": "^9.5.0",
-    "storybook": "^8.6.12",
+    "storybook": "^8.6.17",
     "svelte": "^5.27.0",
     "svelte-eslint-parser": "^1.1.2",
     "svelte-loader": "^3.1.9",
