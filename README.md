@@ -26,12 +26,7 @@ Svelte wrapper for [chart.js](https://www.chartjs.org/). Open for PRs and contri
 
 ---
 
-## Compatibility
-
-| Dependency | Version |
-|---|---|
-| Svelte | `^5.0.0` |
-| Chart.js | `^3.5.0 \|\| ^4.0.0` |
+> Requires **Svelte 5** and **Chart.js 3.5+ or 4.x** — see [Compatibility](#compatibility) for details.
 
 ## Install
 
@@ -214,6 +209,15 @@ Three helper functions are exported for extracting chart elements from pointer e
 - [Scatter Chart](https://stackblitz.com/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/scatter)
 - [Chart Instance](https://stackblitz.com/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/ref)
 - [Events Handling](https://stackblitz.com/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/events)
+
+## Compatibility
+
+| Dependency | Version |
+|---|---|
+| Svelte | `^5.0.0` |
+| Chart.js | `^3.5.0 \|\| ^4.0.0` |
+
+> For Svelte 4 support, use [v3.x](https://github.com/SauravKanchan/svelte-chartjs/tree/v3.1.5).
 
 ## Documentation
 
