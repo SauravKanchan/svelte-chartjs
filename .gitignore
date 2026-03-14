@@ -207,4 +207,6 @@ sites/docs/build
 tmp/
 temp/
 
+.playwright-mcp/
+
 # End of https://www.gitignore.io/api/node,jetbrains+all
