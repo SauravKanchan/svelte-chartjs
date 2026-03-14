@@ -38,7 +38,7 @@
 <aside class:open>
   <nav>
     <a
-      href="{base}/"
+      href={`${base}/`}
       class:active={page.url.pathname === `${base}/`}
       onclick={closeOnMobile}>Home</a
     >
@@ -46,7 +46,7 @@
     <h4>Charts</h4>
     {#each charts as { href, label }}
       <a
-        href="{base}{href}"
+        href={`${base}${href}`}
         class:active={page.url.pathname === `${base}${href}`}
         onclick={closeOnMobile}>{label}</a
       >
@@ -55,7 +55,7 @@
     <h4>Examples</h4>
     {#each examples as { href, label }}
       <a
-        href="{base}{href}"
+        href={`${base}${href}`}
         class:active={page.url.pathname === `${base}${href}`}
         onclick={closeOnMobile}>{label}</a
       >
@@ -63,7 +63,7 @@
 
     <h4>Reference</h4>
     <a
-      href="{base}/api"
+      href={`${base}/api`}
       class:active={page.url.pathname === `${base}/api`}
       onclick={closeOnMobile}>API</a
     >
