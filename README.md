@@ -2,26 +2,33 @@
 
 <img align="right" width="150" height="150" alt="svelte-chartjs logo" src="https://raw.githubusercontent.com/SauravKanchan/svelte-chartjs/master/assets/svelte-chartjs.png">
 
-Svelte wrapper for [chart.js](https://www.chartjs.org/) Open for PRs and contributions!
+Svelte wrapper for [chart.js](https://www.chartjs.org/). Open for PRs and contributions!
 
 [![npm version](https://badge.fury.io/js/svelte-chartjs.svg)](https://badge.fury.io/js/svelte-chartjs)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FSauravKanchan%2Fsvelte-chartjs.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FSauravKanchan%2Fsvelte-chartjs?ref=badge_shield)
 ![npm](https://img.shields.io/npm/dm/svelte-chartjs)
 
 <br />
+<a href="https://saurav.tech/svelte-chartjs/">Docs</a>
+<span>&nbsp;&nbsp;&bull;&nbsp;&nbsp;</span>
 <a href="#install">Install</a>
-<span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+<span>&nbsp;&nbsp;&bull;&nbsp;&nbsp;</span>
 <a href="#usage">Usage</a>
-<span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-<a href="#migration-from-v1-to-v2">Migration guide</a>
-<span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+<span>&nbsp;&nbsp;&bull;&nbsp;&nbsp;</span>
+<a href="#available-charts">Available Charts</a>
+<span>&nbsp;&nbsp;&bull;&nbsp;&nbsp;</span>
+<a href="#tree-shaking">Tree-Shaking</a>
+<span>&nbsp;&nbsp;&bull;&nbsp;&nbsp;</span>
 <a href="#examples">Examples</a>
-<span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-<a href="https://slack.cube.dev/?ref=eco-svelte-chartjs">Slack</a>
-<span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+<span>&nbsp;&nbsp;&bull;&nbsp;&nbsp;</span>
 <a href="https://stackoverflow.com/questions/tagged/svelte-chartjs">Stack Overflow</a>
 <br />
-<hr />
+
+---
+
+## Documentation
+
+Full documentation and live demos are available at the [docs site](https://saurav.tech/svelte-chartjs/).
 
 ## Install
 
@@ -35,22 +42,47 @@ yarn add svelte-chartjs chart.js
 npm i svelte-chartjs chart.js
 ```
 
-<hr />
-
-Need an API to fetch data? Consider [Cube](https://cube.dev/?ref=eco-svelte-chartjs), an open-source API for data apps.
-
-<br />
-
-[![supported by Cube](https://user-images.githubusercontent.com/986756/154330861-d79ab8ec-aacb-4af8-9e17-1b28f1eccb01.svg)](https://cube.dev/?ref=eco-svelte-chartjs)
-
 ## Usage
 
 ```svelte
 <script>
-  import { Line } from 'svelte-chartjs'
+  import { Line } from 'svelte-chartjs';
+  import {
+    Chart as ChartJS,
+    Title,
+    Tooltip,
+    Legend,
+    LineElement,
+    LinearScale,
+    PointElement,
+    CategoryScale,
+  } from 'chart.js';
+
+  ChartJS.register(
+    Title,
+    Tooltip,
+    Legend,
+    LineElement,
+    LinearScale,
+    PointElement,
+    CategoryScale
+  );
+
+  const data = {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    datasets: [
+      {
+        label: 'My First dataset',
+        fill: true,
+        backgroundColor: 'rgba(75,192,192,0.2)',
+        borderColor: 'rgba(75,192,192,1)',
+        data: [65, 59, 80, 81, 56, 55, 40],
+      },
+    ],
+  };
 </script>
 
-<Line data={...} />
+<Line {data} options={{ responsive: true }} />
 ```
 
 ### Custom Size
@@ -66,61 +98,105 @@ In order for Chart.js to obey the custom size you need to set `maintainAspectRat
 />
 ```
 
-## Migration from v1 to v2
+## Available Charts
 
-With v2, this library introduces a number of breaking changes. In order to improve performance, offer new features, and improve maintainability, it was necessary to break backwards compatibility, but we aimed to do so only when worth the benefit.
+| Component | Chart.js Type |
+|---|---|
+| `Bar` | Bar chart |
+| `Bubble` | Bubble chart |
+| `Doughnut` | Doughnut chart |
+| `Line` | Line chart |
+| `Pie` | Pie chart |
+| `PolarArea` | Polar area chart |
+| `Radar` | Radar chart |
+| `Scatter` | Scatter chart |
 
-### Change component import path
+A generic `Chart` component is also available. Use the `type` prop to specify the chart type:
 
-v1:
-
-```javascript
-import Line from 'svelte-chartjs/src/Line.svelte'
+```svelte
+<Chart type="bar" {data} {options} />
 ```
 
-v2:
+## Tree-Shaking
+
+### Quick Setup
+
+Import `chart.js/auto` to register everything:
 
 ```javascript
-import { Line } from 'svelte-chartjs'
-```
-
-### Tree-shaking
-
-v2 of this library, [just like Chart.js v3](https://www.chartjs.org/docs/latest/getting-started/v3-migration.html#setup-and-installation), is tree-shakable. It means that you need to import and register the controllers, elements, scales, and plugins you want to use.
-
-For a list of all the available items to import, see [Chart.js docs](https://www.chartjs.org/docs/latest/getting-started/integration.html#bundlers-webpack-rollup-etc).
-
-v1:
-
-```javascript
-import Line from 'svelte-chartjs/src/Line.svelte'
-```
-
-v2 — lazy way:
-
-```javascript
-import { Line } from 'svelte-chartjs'
+import { Line } from 'svelte-chartjs';
 import 'chart.js/auto';
 ```
 
-v2 — tree-shakable way:
+### Optimized (Selective Imports)
+
+Import and register only the components you need for a smaller bundle:
 
 ```javascript
-import { Line } from 'svelte-chartjs'
-import { Chart as ChartJS, Title, Tooltip, Legend, LineElement, LinearScale, PointElement, CategoryScale } from 'chart.js';
+import { Line } from 'svelte-chartjs';
+import {
+  Chart as ChartJS,
+  Title,
+  Tooltip,
+  Legend,
+  LineElement,
+  LinearScale,
+  PointElement,
+  CategoryScale,
+} from 'chart.js';
 
 ChartJS.register(Title, Tooltip, Legend, LineElement, LinearScale, PointElement, CategoryScale);
 ```
 
-Using the "lazy way" is okay to simplify the migration, but please consider using the tree-shakable way to decrease the bundle size.
+Typed chart components (e.g. `Pie`, `Bar`) automatically register their controller, so you don't need to register it yourself. For example, when using `Pie`, you don't need to register `PieController` explicitly.
 
-Please note that typed chart components register their controllers by default, so you don't need to register them by yourself. For example, when using the Pie component, you don't need to register PieController explicitly.
+For a full list of available imports, see the [Chart.js integration docs](https://www.chartjs.org/docs/latest/getting-started/integration.html#bundlers-webpack-rollup-etc).
 
-```javascript
-import { Pie } from 'svelte-chartjs';
-import { Chart as ChartJS, Title, Tooltip, Legend, ArcElement, CategoryScale } from 'chart.js'
+## Accessing the Chart Instance
 
-ChartJS.register(Title, Tooltip, Legend, ArcElement, CategoryScale)
+Use `bind:chart` to get a reference to the underlying Chart.js instance:
+
+```svelte
+<script>
+  import { Line } from 'svelte-chartjs';
+
+  let chart;
+</script>
+
+<Line bind:chart {data} {options} />
+```
+
+### Event Utilities
+
+Three helper functions are exported for extracting chart elements from pointer events:
+
+- `getDatasetAtEvent(chart, event)` — returns the dataset at the event point
+- `getElementAtEvent(chart, event)` — returns the nearest element at the event point
+- `getElementsAtEvent(chart, event)` — returns all elements at the event point
+
+```svelte
+<script>
+  import {
+    Chart,
+    getDatasetAtEvent,
+    getElementAtEvent,
+    getElementsAtEvent,
+  } from 'svelte-chartjs';
+
+  let chart;
+
+  function onClick(event) {
+    if (!chart) return;
+
+    const dataset = getDatasetAtEvent(chart, event);
+    const element = getElementAtEvent(chart, event);
+    const elements = getElementsAtEvent(chart, event);
+
+    console.log({ dataset, element, elements });
+  }
+</script>
+
+<Chart bind:chart type="bar" onclick={onClick} {data} {options} />
 ```
 
 ## Examples
@@ -133,15 +209,20 @@ ChartJS.register(Title, Tooltip, Legend, ArcElement, CategoryScale)
 - [PolarArea Chart](https://stackblitz.com/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/polar)
 - [Radar Chart](https://stackblitz.com/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/radar)
 - [Scatter Chart](https://stackblitz.com/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/scatter)
-- [ChartJS instance](https://stackblitz.com/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/ref)
-- [Events handling](https://stackblitz.com/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/events)
+- [Chart Instance](https://stackblitz.com/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/ref)
+- [Events Handling](https://stackblitz.com/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/events)
 
-## Documentation
+## Compatibility
 
-Full documentation and live demos are available at the [docs site](https://github.com/SauravKanchan/svelte-chartjs/tree/master/sites/docs). Run locally:
+| Dependency | Version |
+|---|---|
+| Svelte | `^5.0.0` |
+| Chart.js | `^3.5.0 \|\| ^4.0.0` |
 
-```bash
-cd sites/docs && pnpm install && pnpm dev
-```
+> For Svelte 4 support, use [v3.x](https://github.com/SauravKanchan/svelte-chartjs/tree/v3.1.5).
+
 ## License
+
+[MIT](./LICENSE)
+
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FSauravKanchan%2Fsvelte-chartjs.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FSauravKanchan%2Fsvelte-chartjs?ref=badge_large)
