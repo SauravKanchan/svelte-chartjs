@@ -79,7 +79,7 @@
     "publint": "^0.3.0",
     "simple-git-hooks": "^2.8.0",
     "simple-github-release": "^1.0.0",
-    "size-limit": "^8.0.0",
+    "size-limit": "^12.0.0",
     "commit-and-tag-version": "^12.0.0",
     "svelte": "^5.53.5",
     "svelte-eslint-parser": "^1.1.2",
