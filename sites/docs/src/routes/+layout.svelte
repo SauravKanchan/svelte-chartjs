@@ -27,6 +27,7 @@
 
   main {
     flex: 1;
+    min-width: 0;
     padding: 2rem 3rem;
     margin-top: var(--header-height);
     margin-left: var(--sidebar-width);
@@ -36,6 +37,7 @@
     main {
       padding: 1.5rem 1rem;
       margin-left: 0;
+      overflow-x: hidden;
     }
   }
 </style>
