@@ -13,17 +13,15 @@
   --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg: #0d1117;
-    --color-bg-secondary: #161b22;
-    --color-text: #e6edf3;
-    --color-text-secondary: #8b949e;
-    --color-border: #30363d;
-    --color-primary: #ff6b3d;
-    --color-primary-light: #ff8a5c;
-    --color-code-bg: #1c2128;
-  }
+[data-theme='dark'] {
+  --color-bg: #0d1117;
+  --color-bg-secondary: #161b22;
+  --color-text: #e6edf3;
+  --color-text-secondary: #8b949e;
+  --color-border: #30363d;
+  --color-primary: #ff6b3d;
+  --color-primary-light: #ff8a5c;
+  --color-code-bg: #1c2128;
 }
 
 *,
@@ -52,7 +50,7 @@ a:hover {
 
 code {
   font-family: var(--font-mono);
-  font-size: 0.875em;
+  font-size: 0.95em;
   background: var(--color-code-bg);
   padding: 0.15em 0.4em;
   border-radius: 4px;
@@ -105,7 +103,7 @@ pre {
 pre.shiki,
 pre.shiki span {
   font-family: var(--font-mono);
-  font-size: 0.85em;
+  font-size: 0.95em;
 }
 
 html pre.shiki {
@@ -117,21 +115,19 @@ html pre.shiki span {
   color: var(--shiki-light, inherit) !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  html pre.shiki {
-    background-color: var(--shiki-dark-bg, #0d1117) !important;
-  }
+[data-theme='dark'] pre.shiki {
+  background-color: var(--shiki-dark-bg, #0d1117) !important;
+}
 
-  html pre.shiki,
-  html pre.shiki span {
-    color: var(--shiki-dark, inherit) !important;
-  }
+[data-theme='dark'] pre.shiki,
+[data-theme='dark'] pre.shiki span {
+  color: var(--shiki-dark, inherit) !important;
 }
 
 pre code {
   background: none;
   padding: 0;
-  font-size: 0.85em;
+  font-size: inherit;
 }
 
 h1,

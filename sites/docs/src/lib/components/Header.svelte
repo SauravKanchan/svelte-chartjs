@@ -1,4 +1,5 @@
 <script>
+  import ThemeToggle from './ThemeToggle.svelte';
   let { onToggleSidebar = () => {} } = $props();
 </script>
 
@@ -46,6 +47,7 @@
       </svg>
       <span class="link-label">npm</span>
     </a>
+    <ThemeToggle />
   </nav>
 </header>
 
