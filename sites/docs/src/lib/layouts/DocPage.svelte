@@ -56,6 +56,12 @@
     }
   }
 
+  @media (max-width: 768px) {
+    .doc-layout {
+      max-width: 100%;
+    }
+  }
+
   .edit-link {
     margin-top: 3rem;
     padding-top: 1.5rem;
