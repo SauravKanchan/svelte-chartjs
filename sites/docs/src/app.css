@@ -107,12 +107,7 @@ pre.shiki span {
 }
 
 html pre.shiki {
-  background-color: var(--shiki-light-bg, #fff) !important;
-}
-
-html pre.shiki,
-html pre.shiki span {
-  color: var(--shiki-light, inherit) !important;
+  background-color: #fff !important;
 }
 
 [data-theme='dark'] pre.shiki {
