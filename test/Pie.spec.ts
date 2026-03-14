@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { render } from '@testing-library/svelte';
+import { render } from '@testing-library/svelte/svelte5';
 
 import 'chart.js/auto';
 import { Pie } from '../src/index.js';
@@ -24,7 +24,7 @@ describe('Pie Chart', () => {
   });
 
   it('should pass options prop', () => {
-    const component = render(Pie, { props: { options } });
+    const component = render(Pie, { props: { data, options } });
 
     expect(() => component).not.toThrow();
   });

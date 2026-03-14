@@ -1,4 +1,5 @@
 import type {
+  Chart as ChartJS,
   ChartType,
   ChartData,
   ChartOptions,
@@ -6,13 +7,13 @@ import type {
   Plugin,
   UpdateMode,
 } from 'chart.js';
-import type { HTMLAttributes } from './html.js';
+import type { HTMLCanvasAttributes } from 'svelte/elements';
 
 export interface ChartBaseProps<
   TType extends ChartType = ChartType,
   TData = DefaultDataPoint<TType>,
-  TLabel = unknown
-> extends Omit<HTMLAttributes, 'type' | 'data' | 'options' | 'plugins'> {
+  TLabel = unknown,
+> extends Omit<HTMLCanvasAttributes, 'type' | 'data' | 'options' | 'plugins'> {
   /**
    * Chart.js chart type
    */
@@ -39,4 +40,8 @@ export interface ChartBaseProps<
    * @see https://www.chartjs.org/docs/latest/developers/api.html#update-mode
    */
   updateMode?: UpdateMode;
+  /**
+   * The Chart.js instance
+   */
+  chart?: ChartJS<TType, TData, TLabel> | null;
 }

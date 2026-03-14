@@ -1,24 +1,15 @@
-<script lang="ts">
+<script lang="ts" generics="TData = DefaultDataPoint<'line'>, TLabel = unknown">
   import type { DefaultDataPoint } from 'chart.js';
   import { Chart as ChartJS, LineController } from 'chart.js';
   import type { ChartBaseProps } from './types/index.js';
   import Chart from './Chart.svelte';
-  import { useForwardEvents } from './utils/index.js';
-
-  interface $$Props<TData = DefaultDataPoint<'line'>, TLabel = unknown>
-    extends Omit<ChartBaseProps<'line', TData, TLabel>, 'type'> {
-    chart?: ChartJS<'line', TData, TLabel> | null;
-  }
 
   ChartJS.register(LineController);
 
-  export let chart: $$Props['chart'] = null;
-  let props: $$Props;
-  let baseChartRef: Chart;
-
-  useForwardEvents(() => baseChartRef);
-
-  $: props = $$props as $$Props;
+  let {
+    chart = $bindable(null),
+    ...restProps
+  }: Omit<ChartBaseProps<'line', TData, TLabel>, 'type'> = $props();
 </script>
 
-<Chart bind:this={baseChartRef} bind:chart type="line" {...props} />
+<Chart bind:chart type="line" {...restProps} />

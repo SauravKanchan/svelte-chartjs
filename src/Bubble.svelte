@@ -1,24 +1,18 @@
-<script lang="ts">
+<script
+  lang="ts"
+  generics="TData = DefaultDataPoint<'bubble'>, TLabel = unknown"
+>
   import type { DefaultDataPoint } from 'chart.js';
   import { Chart as ChartJS, BubbleController } from 'chart.js';
   import type { ChartBaseProps } from './types/index.js';
   import Chart from './Chart.svelte';
-  import { useForwardEvents } from './utils/index.js';
-
-  interface $$Props<TData = DefaultDataPoint<'bubble'>, TLabel = unknown>
-    extends Omit<ChartBaseProps<'bubble', TData, TLabel>, 'type'> {
-    chart?: ChartJS<'bubble', TData, TLabel> | null;
-  }
 
   ChartJS.register(BubbleController);
 
-  export let chart: $$Props['chart'] = null;
-  let props: $$Props;
-  let baseChartRef: Chart;
-
-  useForwardEvents(() => baseChartRef);
-
-  $: props = $$props as $$Props;
+  let {
+    chart = $bindable(null),
+    ...restProps
+  }: Omit<ChartBaseProps<'bubble', TData, TLabel>, 'type'> = $props();
 </script>
 
-<Chart bind:this={baseChartRef} bind:chart type="bubble" {...props} />
+<Chart bind:chart type="bubble" {...restProps} />
