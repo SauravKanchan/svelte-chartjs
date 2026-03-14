@@ -8,6 +8,7 @@ Svelte wrapper for [chart.js](https://www.chartjs.org/). Open for PRs and contri
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FSauravKanchan%2Fsvelte-chartjs.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FSauravKanchan%2Fsvelte-chartjs?ref=badge_shield)
 ![npm](https://img.shields.io/npm/dm/svelte-chartjs)
 [![CI](https://github.com/SauravKanchan/svelte-chartjs/actions/workflows/ci.yml/badge.svg)](https://github.com/SauravKanchan/svelte-chartjs/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/SauravKanchan/svelte-chartjs/branch/master/graph/badge.svg)](https://codecov.io/gh/SauravKanchan/svelte-chartjs)
 
 <br />
 <a href="https://saurav.tech/svelte-chartjs/">Docs</a>
