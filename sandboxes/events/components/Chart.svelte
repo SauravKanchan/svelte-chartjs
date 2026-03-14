@@ -67,4 +67,4 @@
   }
 </script>
 
-<Chart bind:chart type="bar" on:click={onClick} {data} {options} />
+<Chart bind:chart type="bar" onclick={onClick} {data} {options} />

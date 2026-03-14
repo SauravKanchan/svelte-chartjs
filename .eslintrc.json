@@ -21,7 +21,8 @@
       "files": ["*.svelte"],
       "parser": "svelte-eslint-parser",
       "rules": {
-        "no-undef": "off"
+        "no-undef": "off",
+        "svelte/valid-compile": ["error", { "ignoreWarnings": true }]
       },
       "parserOptions": {
         "parser": "@typescript-eslint/parser"

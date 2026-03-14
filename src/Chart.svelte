@@ -2,7 +2,7 @@
   lang="ts"
   generics="TType extends ChartType = ChartType, TData = DefaultDataPoint<TType>, TLabel = unknown"
 >
-  import { onMount, onDestroy } from 'svelte';
+  import { onMount, onDestroy, untrack } from 'svelte';
   import type { ChartType, DefaultDataPoint } from 'chart.js';
   import { Chart as ChartJS } from 'chart.js';
   import type { ChartBaseProps } from './types/index.js';
@@ -37,13 +37,18 @@
   });
 
   $effect(() => {
-    if (!chart) return;
+    const frozenData = freeze(data);
+    const frozenOptions = freeze(options);
+    const frozenUpdateMode = freeze(updateMode);
 
-    chart.data = freeze(data);
-    if (chart.options && options) {
-      Object.assign(chart.options, freeze(options));
+    const currentChart = untrack(() => chart);
+    if (!currentChart) return;
+
+    currentChart.data = frozenData;
+    if (currentChart.options && frozenOptions) {
+      Object.assign(currentChart.options, frozenOptions);
     }
-    chart.update(freeze(updateMode));
+    currentChart.update(frozenUpdateMode);
   });
 
   onDestroy(() => {
