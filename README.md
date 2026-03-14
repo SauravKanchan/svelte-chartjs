@@ -125,16 +125,16 @@ ChartJS.register(Title, Tooltip, Legend, ArcElement, CategoryScale)
 
 ## Examples
 
-- [Bar Chart](https://codesandbox.io/s/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/bar)
-- [Bubble Chart](https://codesandbox.io/s/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/bubble)
-- [Doughnut Chart](https://codesandbox.io/s/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/doughnut)
-- [Line Chart](https://codesandbox.io/s/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/line)
-- [Pie Chart](https://codesandbox.io/s/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/pie)
-- [PolarArea Chart](https://codesandbox.io/s/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/polar)
-- [Radar Chart](https://codesandbox.io/s/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/radar)
-- [Scatter Chart](https://codesandbox.io/s/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/scatter)
-- [ChartJS instance](https://codesandbox.io/s/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/ref)
-- [Events handling](https://codesandbox.io/s/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/events)
+- [Bar Chart](https://stackblitz.com/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/bar)
+- [Bubble Chart](https://stackblitz.com/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/bubble)
+- [Doughnut Chart](https://stackblitz.com/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/doughnut)
+- [Line Chart](https://stackblitz.com/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/line)
+- [Pie Chart](https://stackblitz.com/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/pie)
+- [PolarArea Chart](https://stackblitz.com/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/polar)
+- [Radar Chart](https://stackblitz.com/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/radar)
+- [Scatter Chart](https://stackblitz.com/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/scatter)
+- [ChartJS instance](https://stackblitz.com/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/ref)
+- [Events handling](https://stackblitz.com/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/events)
 
 ## Documentation
 

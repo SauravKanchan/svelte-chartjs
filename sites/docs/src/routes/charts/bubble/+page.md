@@ -53,4 +53,4 @@ description: Bubble chart component for svelte-chartjs
 | `updateMode` | `UpdateMode` | — | Transition mode |
 | `chart` | `Chart` | — | Bindable chart instance |
 
-[Open in CodeSandbox](https://codesandbox.io/s/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/bubble)
+[Open in StackBlitz](https://stackblitz.com/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/bubble)

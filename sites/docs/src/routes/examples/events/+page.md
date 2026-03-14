@@ -65,4 +65,4 @@ svelte-chartjs provides three utility functions to extract meaningful data from 
 
 All three functions accept a `Chart` instance and a `PointerEvent`, and return an array of `InteractionItem` objects with `datasetIndex` and `index` properties.
 
-[Open in CodeSandbox](https://codesandbox.io/s/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/events)
+[Open in StackBlitz](https://stackblitz.com/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/events)

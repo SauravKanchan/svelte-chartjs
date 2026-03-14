@@ -30,7 +30,7 @@ body:
       label: Reproduction
       description: |
         Please provide issue reproduction.
-        You can give a link to a repository with the reproduction or make a fork of [this sandbox](https://codesandbox.io/s/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/ref?file=/components/Chart.svelte) and reproduce the issue there.
+        You can give a link to a repository with the reproduction or make a fork of [this sandbox](https://stackblitz.com/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/ref?file=components/Chart.svelte) and reproduce the issue there.
     validations:
       required: true
 

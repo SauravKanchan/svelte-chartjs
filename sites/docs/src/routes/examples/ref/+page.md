@@ -62,4 +62,4 @@ You can access the underlying Chart.js instance using Svelte's `bind:chart` dire
 
 The `chart` variable gives you full access to the [Chart.js API](https://www.chartjs.org/docs/latest/developers/api.html), including methods like `update()`, `destroy()`, `toBase64Image()`, and the tooltip controller.
 
-[Open in CodeSandbox](https://codesandbox.io/s/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/ref)
+[Open in StackBlitz](https://stackblitz.com/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/ref)
