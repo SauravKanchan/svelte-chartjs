@@ -79,6 +79,12 @@ ChartJS.register(
 
 Typed chart components (e.g. `Line`, `Bar`) automatically register their own controller, so you don't need to register `LineController`, `BarController`, etc.
 
+## Compatibility
+
+| svelte-chartjs | Svelte | Chart.js |
+|---------------|--------|----------|
+| 4.x           | 5.x    | 3.5+ / 4.x |
+
 ## Custom Size
 
 Set `maintainAspectRatio` to `false` to control chart dimensions:
