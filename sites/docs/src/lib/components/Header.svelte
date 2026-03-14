@@ -1,4 +1,5 @@
 <script>
+  import { base } from '$app/paths';
   import ThemeToggle from './ThemeToggle.svelte';
   let { onToggleSidebar = () => {} } = $props();
 </script>
@@ -15,8 +16,13 @@
         />
       </svg>
     </button>
-    <a href="/" class="logo">
-      <img src="/favicon.png" alt="svelte-chartjs" width="28" height="28" />
+    <a href="{base}/" class="logo">
+      <img
+        src="{base}/favicon.png"
+        alt="svelte-chartjs"
+        width="28"
+        height="28"
+      />
       <span>svelte-chartjs</span>
     </a>
   </div>
