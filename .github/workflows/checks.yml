@@ -27,9 +27,9 @@ jobs:
         uses: andresz1/size-limit-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-  storybook:
+  docs:
     runs-on: ubuntu-latest
-    name: storybook
+    name: docs
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v4
@@ -44,9 +44,9 @@ jobs:
           cache: 'pnpm'
           registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies
-        run: pnpm install
-      - name: Check storybook
-        run: pnpm build:storybook
+        run: cd sites/docs && pnpm install
+      - name: Build docs
+        run: cd sites/docs && pnpm build
   editorconfig:
     runs-on: ubuntu-latest
     name: editorconfig
