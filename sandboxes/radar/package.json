@@ -2,6 +2,7 @@
   "name": "radar-chart",
   "type": "module",
   "scripts": {
+    "dev": "vite",
     "start": "vite"
   },
   "dependencies": {
