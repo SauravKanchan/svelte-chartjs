@@ -26,7 +26,9 @@ Svelte wrapper for [chart.js](https://www.chartjs.org/). Open for PRs and contri
 
 ---
 
-> Requires **Svelte 5** and **Chart.js 3.5+ or 4.x** — see [Compatibility](#compatibility) for details.
+## Documentation
+
+Full documentation and live demos are available at the [docs site](https://saurav.tech/svelte-chartjs/).
 
 ## Install
 
@@ -218,10 +220,6 @@ Three helper functions are exported for extracting chart elements from pointer e
 | Chart.js | `^3.5.0 \|\| ^4.0.0` |
 
 > For Svelte 4 support, use [v3.x](https://github.com/SauravKanchan/svelte-chartjs/tree/v3.1.5).
-
-## Documentation
-
-Full documentation and live demos are available at the [docs site](https://saurav.tech/svelte-chartjs/).
 
 ## License
 
