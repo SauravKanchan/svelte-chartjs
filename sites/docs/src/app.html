@@ -9,5 +9,18 @@
   </head>
   <body>
     <div id="app">%sveltekit.body%</div>
+    <script>
+      document.addEventListener('click', function (e) {
+        var btn = e.target.closest('.copy-btn');
+        if (!btn) return;
+        var code = atob(btn.dataset.code);
+        navigator.clipboard.writeText(code).then(function () {
+          btn.textContent = 'Copied!';
+          setTimeout(function () {
+            btn.textContent = 'Copy';
+          }, 1500);
+        });
+      });
+    </script>
   </body>
 </html>

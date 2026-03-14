@@ -58,13 +58,74 @@ code {
   border-radius: 4px;
 }
 
-pre {
+.code-block {
+  position: relative;
+  margin: 1em 0;
+}
+
+.code-block .copy-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
   background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s;
+  z-index: 1;
+}
+
+.code-block:hover .copy-btn {
+  opacity: 1;
+}
+
+.code-block .copy-btn:hover {
+  background: var(--color-border);
+  color: var(--color-text);
+}
+
+.code-block pre {
+  margin: 0;
+}
+
+pre {
   border: 1px solid var(--color-border);
   border-radius: 8px;
   padding: 1em;
   overflow-x: auto;
   margin: 1em 0;
+}
+
+/* Shiki dual-theme: show light theme by default, dark in dark mode */
+pre.shiki,
+pre.shiki span {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+}
+
+html pre.shiki {
+  background-color: var(--shiki-light-bg, #fff) !important;
+}
+
+html pre.shiki,
+html pre.shiki span {
+  color: var(--shiki-light, inherit) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  html pre.shiki {
+    background-color: var(--shiki-dark-bg, #0d1117) !important;
+  }
+
+  html pre.shiki,
+  html pre.shiki span {
+    color: var(--shiki-dark, inherit) !important;
+  }
 }
 
 pre code {
