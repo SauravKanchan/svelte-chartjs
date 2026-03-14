@@ -16,9 +16,9 @@
         />
       </svg>
     </button>
-    <a href="{base}/" class="logo">
+    <a href={`${base}/`} class="logo">
       <img
-        src="{base}/favicon.png"
+        src={`${base}/favicon.png`}
         alt="svelte-chartjs"
         width="28"
         height="28"
