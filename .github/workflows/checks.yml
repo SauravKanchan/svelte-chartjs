@@ -44,7 +44,9 @@ jobs:
           cache: 'pnpm'
           registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies
-        run: cd sites/docs && pnpm install
+        run: pnpm install
+      - name: Build library
+        run: pnpm build
       - name: Build docs
         run: cd sites/docs && pnpm build
   editorconfig:
