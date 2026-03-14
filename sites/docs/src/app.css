@@ -10,6 +10,8 @@
   --color-code-bg: #f0f0f0;
   --sidebar-width: 240px;
   --header-height: 56px;
+  --toc-width: 220px;
+  --content-max-width: 800px;
   --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
 }
 
@@ -125,6 +127,10 @@ pre code {
   font-size: inherit;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1,
 h2,
 h3,
@@ -132,6 +138,7 @@ h4 {
   line-height: 1.3;
   margin-top: 1.5em;
   margin-bottom: 0.5em;
+  scroll-margin-top: calc(var(--header-height) + 1rem);
 }
 
 h1 {
