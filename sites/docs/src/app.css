@@ -1,0 +1,182 @@
+:root {
+  color-scheme: light dark;
+  --color-bg: #ffffff;
+  --color-bg-secondary: #f6f8fa;
+  --color-text: #1a1a2e;
+  --color-text-secondary: #586069;
+  --color-border: #e1e4e8;
+  --color-primary: #ff3e00;
+  --color-primary-light: #ff6b3d;
+  --color-code-bg: #f0f0f0;
+  --sidebar-width: 240px;
+  --header-height: 56px;
+  --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+}
+
+[data-theme='dark'] {
+  --color-bg: #0d1117;
+  --color-bg-secondary: #161b22;
+  --color-text: #e6edf3;
+  --color-text-secondary: #8b949e;
+  --color-border: #30363d;
+  --color-primary: #ff6b3d;
+  --color-primary-light: #ff8a5c;
+  --color-code-bg: #1c2128;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.95em;
+  background: var(--color-code-bg);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+}
+
+.code-block {
+  position: relative;
+  margin: 1em 0;
+}
+
+.code-block .copy-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s;
+  z-index: 1;
+}
+
+.code-block:hover .copy-btn {
+  opacity: 1;
+}
+
+.code-block .copy-btn:hover {
+  background: var(--color-border);
+  color: var(--color-text);
+}
+
+.code-block pre {
+  margin: 0;
+}
+
+pre {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1em;
+  overflow-x: auto;
+  margin: 1em 0;
+}
+
+/* Shiki dual-theme: show light theme by default, dark in dark mode */
+pre.shiki,
+pre.shiki span {
+  font-family: var(--font-mono);
+  font-size: 0.95em;
+}
+
+html pre.shiki {
+  background-color: var(--shiki-light-bg, #fff) !important;
+}
+
+html pre.shiki,
+html pre.shiki span {
+  color: var(--shiki-light, inherit) !important;
+}
+
+[data-theme='dark'] pre.shiki {
+  background-color: var(--shiki-dark-bg, #0d1117) !important;
+}
+
+[data-theme='dark'] pre.shiki,
+[data-theme='dark'] pre.shiki span {
+  color: var(--shiki-dark, inherit) !important;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.3;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2em;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.3em;
+}
+
+p {
+  margin: 0.75em 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+  overflow-x: auto;
+  display: block;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.5em 0.75em;
+  border: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+th {
+  background: var(--color-bg-secondary);
+  font-weight: 600;
+}
+
+ul,
+ol {
+  padding-left: 1.5em;
+  margin: 0.75em 0;
+}

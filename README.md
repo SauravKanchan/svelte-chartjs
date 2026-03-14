@@ -136,8 +136,12 @@ ChartJS.register(Title, Tooltip, Legend, ArcElement, CategoryScale)
 - [ChartJS instance](https://codesandbox.io/s/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/ref)
 - [Events handling](https://codesandbox.io/s/github/SauravKanchan/svelte-chartjs/tree/master/sandboxes/events)
 
-## Docs for v1
+## Documentation
 
-Full Documentation and demo for v1 [here](https://saurav.tech/mdbsvelte/?path=/story/charts--installation)
+Full documentation and live demos are available at the [docs site](https://github.com/SauravKanchan/svelte-chartjs/tree/master/sites/docs). Run locally:
+
+```bash
+cd sites/docs && pnpm install && pnpm dev
+```
 ## License
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FSauravKanchan%2Fsvelte-chartjs.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FSauravKanchan%2Fsvelte-chartjs?ref=badge_large)

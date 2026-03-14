@@ -39,8 +39,8 @@
     "test:unit": "vitest run --coverage",
     "test": "pnpm test:lint && pnpm test:unit",
     "lint:package": "publint --strict",
-    "start:storybook": "storybook dev -p 6006",
-    "build:storybook": "del ./storybook-static; NODE_ENV=production storybook build -o ./storybook-static",
+    "docs:dev": "cd sites/docs && pnpm dev",
+    "docs:build": "cd sites/docs && pnpm build",
     "bumpVersion": "commit-and-tag-version",
     "createGithubRelease": "simple-github-release",
     "release": "pnpm bumpVersion && git push origin master --tags && pnpm createGithubRelease",
@@ -55,15 +55,6 @@
     "@commitlint/config-conventional": "^18.0.0",
     "@commitlint/cz-commitlint": "^18.0.0",
     "@size-limit/preset-big-lib": "^8.0.0",
-    "@storybook/addon-actions": "^8.6.12",
-    "@storybook/addon-backgrounds": "^8.6.12",
-    "@storybook/addon-docs": "^8.6.12",
-    "@storybook/addon-essentials": "^8.6.12",
-    "@storybook/addon-measure": "^8.6.12",
-    "@storybook/addon-outline": "^8.6.12",
-    "@storybook/builder-vite": "^8.6.12",
-    "@storybook/svelte": "^8.6.12",
-    "@storybook/svelte-vite": "^8.6.12",
     "@sveltejs/package": "^2.2.4",
     "@sveltejs/vite-plugin-svelte": "^5.0.3",
     "@testing-library/jest-dom": "^6.1.4",
@@ -90,7 +81,6 @@
     "simple-github-release": "^1.0.0",
     "size-limit": "^8.0.0",
     "commit-and-tag-version": "^12.0.0",
-    "storybook": "^8.6.18",
     "svelte": "^5.53.5",
     "svelte-eslint-parser": "^1.1.2",
     "svelte-loader": "^3.1.9",
@@ -104,5 +94,6 @@
       "esbuild",
       "simple-git-hooks"
     ]
-  }
+  },
+  "packageManager": "pnpm@10.32.1+sha512.a706938f0e89ac1456b6563eab4edf1d1faf3368d1191fc5c59790e96dc918e4456ab2e67d613de1043d2e8c81f87303e6b40d4ffeca9df15ef1ad567348f2be"
 }
