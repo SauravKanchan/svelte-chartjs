@@ -2,7 +2,7 @@
   "setupTasks": [
     {
       "name": "Install Dependencies",
-      "command": "npm install --legacy-peer-deps"
+      "command": "npm install"
     }
   ],
   "tasks": {
