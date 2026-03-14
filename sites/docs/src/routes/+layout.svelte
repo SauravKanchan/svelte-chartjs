@@ -28,7 +28,6 @@
   main {
     flex: 1;
     padding: 2rem 3rem;
-    max-width: 900px;
     margin-top: var(--header-height);
     margin-left: var(--sidebar-width);
   }

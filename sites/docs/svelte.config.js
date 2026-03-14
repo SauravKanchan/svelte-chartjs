@@ -3,6 +3,7 @@ import path from 'path';
 import adapter from '@sveltejs/adapter-static';
 import { mdsvex } from 'mdsvex';
 import { createHighlighter } from 'shiki';
+import rehypeSlug from 'rehype-slug';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -20,6 +21,7 @@ const config = {
       layout: {
         _: path.resolve(__dirname, './src/lib/layouts/DocPage.svelte'),
       },
+      rehypePlugins: [rehypeSlug],
       highlight: {
         highlighter: (code, lang) => {
           let html = highlighter.codeToHtml(code, {
