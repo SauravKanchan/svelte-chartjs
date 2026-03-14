@@ -18,7 +18,13 @@
   const examples = [
     { href: '/examples/ref', label: 'Chart Instance' },
     { href: '/examples/events', label: 'Events' },
+    { href: '/examples/horizontal-bar', label: 'Horizontal Bar' },
+    { href: '/examples/stacked-bar', label: 'Stacked Bar' },
+    { href: '/examples/multitype', label: 'Mixed Chart' },
+    { href: '/examples/gradient', label: 'Gradient' },
   ];
+
+  const guides = [{ href: '/guides/reactivity', label: 'Reactive Data' }];
 
   function closeOnMobile() {
     open = false;
@@ -54,6 +60,15 @@
 
     <h4>Examples</h4>
     {#each examples as { href, label }}
+      <a
+        href={`${base}${href}`}
+        class:active={page.url.pathname === `${base}${href}`}
+        onclick={closeOnMobile}>{label}</a
+      >
+    {/each}
+
+    <h4>Guides</h4>
+    {#each guides as { href, label }}
       <a
         href={`${base}${href}`}
         class:active={page.url.pathname === `${base}${href}`}
