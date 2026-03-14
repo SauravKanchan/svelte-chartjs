@@ -63,7 +63,7 @@
     "@types/node": "^20.11.10",
     "@typescript-eslint/eslint-plugin": "^7.0.0",
     "@typescript-eslint/parser": "^7.0.0",
-    "@vitest/coverage-v8": "^1.2.2",
+    "@vitest/coverage-v8": "^4.0.0",
     "chart.js": "^4.1.2",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
@@ -86,7 +86,7 @@
     "svelte-loader": "^3.1.9",
     "typescript": "^5.0.0",
     "vite": "^6.2.6",
-    "vitest": "^1.2.1",
+    "vitest": "^4.0.0",
     "vitest-canvas-mock": "^0.3.3"
   },
   "pnpm": {
