@@ -2,11 +2,10 @@
 /public/build/
 
 .DS_Store
-lib
-dist
+/lib
+/dist
 .idea
-lib
-package
+/package
 
 
 # Created by https://www.gitignore.io/api/node,jetbrains+all
@@ -187,7 +186,8 @@ dist/
 # https://create-react-app.dev/docs/using-the-public-folder/#docsNav
 # public
 
-# Docs site build outputs
+# Docs site
+!sites/docs/src/lib
 sites/docs/.svelte-kit
 sites/docs/build
 

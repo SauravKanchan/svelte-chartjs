@@ -4,11 +4,16 @@
   import Header from '$lib/components/Header.svelte';
 
   let { children } = $props();
+  let sidebarOpen = $state(false);
+
+  function toggleSidebar() {
+    sidebarOpen = !sidebarOpen;
+  }
 </script>
 
-<Header />
+<Header onToggleSidebar={toggleSidebar} />
 <div class="shell">
-  <Sidebar />
+  <Sidebar bind:open={sidebarOpen} />
   <main>
     {@render children()}
   </main>
@@ -25,11 +30,13 @@
     padding: 2rem 3rem;
     max-width: 900px;
     margin-top: var(--header-height);
+    margin-left: var(--sidebar-width);
   }
 
   @media (max-width: 768px) {
     main {
       padding: 1.5rem 1rem;
+      margin-left: 0;
     }
   }
 </style>
