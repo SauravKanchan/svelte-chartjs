@@ -1,6 +1,6 @@
 {
   "parser": "@typescript-eslint/parser",
-  "plugins": ["vitest", "@typescript-eslint"],
+  "plugins": ["@vitest", "@typescript-eslint"],
   "parserOptions": {
     "ecmaVersion": 2019,
     "sourceType": "module",
