@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0](https://github.com/SauravKanchan/svelte-chartjs/compare/v3.1.5...v4.0.0) (2026-03-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* Svelte 5 is now required (`svelte >= 5.0.0`)
+
+
+### Features
+
+* upgrade to Svelte 5 ([2f63302](https://github.com/SauravKanchan/svelte-chartjs/commit/2f63302))
+* **docs:** add docs site with GitHub Pages deployment ([328fe1a](https://github.com/SauravKanchan/svelte-chartjs/commit/328fe1a))
+* **docs:** add centered content layout and right-side table of contents ([f0829fb](https://github.com/SauravKanchan/svelte-chartjs/commit/f0829fb))
+
+### [4.0.1](https://github.com/SauravKanchan/svelte-chartjs/compare/v4.0.0...v4.0.1) (2026-03-15)
+
+
+### Bug Fixes
+
+* resolve horizontal scrolling on docs site mobile viewport ([b22f3b1](https://github.com/SauravKanchan/svelte-chartjs/commit/b22f3b1))
+* update eslint config for @vitest/eslint-plugin ([e991060](https://github.com/SauravKanchan/svelte-chartjs/commit/e991060))
+
 ### [3.1.5](https://github.com/SauravKanchan/svelte-chartjs/compare/v3.1.4...v3.1.5) (2024-02-06)
 
 
