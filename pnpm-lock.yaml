@@ -27,8 +27,8 @@ importers:
         specifier: ^5.0.3
         version: 5.0.3(svelte@5.53.11)(vite@8.0.0(@types/node@24.12.0)(jiti@2.4.2)(terser@5.39.0)(yaml@2.8.2))
       '@testing-library/jest-dom':
-        specifier: ^6.1.4
-        version: 6.6.3
+        specifier: ^7.0.0
+        version: 7.0.1(@testing-library/dom@10.4.0)(vitest@1.6.1(@types/node@24.12.0)(jsdom@28.1.0)(lightningcss@1.32.0)(terser@5.39.0))
       '@testing-library/svelte':
         specifier: ^5.2.7
         version: 5.2.7(svelte@5.53.11)(vite@8.0.0(@types/node@24.12.0)(jiti@2.4.2)(terser@5.39.0)(yaml@2.8.2))(vitest@1.6.1(@types/node@24.12.0)(jsdom@28.1.0)(lightningcss@1.32.0)(terser@5.39.0))
@@ -1008,9 +1008,15 @@ packages:
     resolution: {integrity: sha512-pemlzrSESWbdAloYml3bAJMEfNh1Z7EduzqPKprCH5S341frlpYnUEW0H72dLxa6IsYr+mPno20GiSm+h9dEdQ==}
     engines: {node: '>=18'}
 
-  '@testing-library/jest-dom@6.6.3':
-    resolution: {integrity: sha512-IteBhl4XqYNkM54f4ejhLRJiZNqcSCoXUOG2CPK7qbD322KjQozM4kHQOfkG2oln9b9HTYqs+Sae8vBATubxxA==}
-    engines: {node: '>=14', npm: '>=6', yarn: '>=1'}
+  '@testing-library/jest-dom@7.0.1':
+    resolution: {integrity: sha512-oMDTC3oA+6CXSO2JZnvOI7CA6oVub6kij5ggk9ohwye5slmkwxYDXcPOVxgMw/RQlticjtO0C1RZkR97HgrWMw==}
+    engines: {node: '>=22', npm: '>=6', yarn: '>=1'}
+    peerDependencies:
+      '@testing-library/dom': '>=10 <11'
+      vitest: '>= 0.32'
+    peerDependenciesMeta:
+      vitest:
+        optional: true
 
   '@testing-library/svelte@5.2.7':
     resolution: {integrity: sha512-aGhUaFmEXEVost4QOsbHUUbHLwi7ZZRRxAHFDO2Cmr0BZD3/3+XvaYEPq70Rdw0NRNjdqZHdARBEcrCOkPuAqw==}
@@ -1479,10 +1485,6 @@ packages:
   chalk@2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}
     engines: {node: '>=4'}
-
-  chalk@3.0.0:
-    resolution: {integrity: sha512-4D3B6Wf41KOYRFdszmDqMCGq5VV/uMAB273JILmO+3jAlh8X4qDtdtgCR3fxtbLEMzSx22QdhnDcJvu2u1fVwg==}
-    engines: {node: '>=8'}
 
   chalk@4.1.2:
     resolution: {integrity: sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==}
@@ -5268,15 +5270,17 @@ snapshots:
       lz-string: 1.5.0
       pretty-format: 27.5.1
 
-  '@testing-library/jest-dom@6.6.3':
+  '@testing-library/jest-dom@7.0.1(@testing-library/dom@10.4.0)(vitest@1.6.1(@types/node@24.12.0)(jsdom@28.1.0)(lightningcss@1.32.0)(terser@5.39.0))':
     dependencies:
       '@adobe/css-tools': 4.4.2
+      '@testing-library/dom': 10.4.0
       aria-query: 5.3.2
-      chalk: 3.0.0
       css.escape: 1.5.1
       dom-accessibility-api: 0.6.3
-      lodash: 4.17.21
+      picocolors: 1.1.1
       redent: 3.0.0
+    optionalDependencies:
+      vitest: 1.6.1(@types/node@24.12.0)(jsdom@28.1.0)(lightningcss@1.32.0)(terser@5.39.0)
 
   '@testing-library/svelte@5.2.7(svelte@5.53.11)(vite@8.0.0(@types/node@24.12.0)(jiti@2.4.2)(terser@5.39.0)(yaml@2.8.2))(vitest@1.6.1(@types/node@24.12.0)(jsdom@28.1.0)(lightningcss@1.32.0)(terser@5.39.0))':
     dependencies:
@@ -5833,11 +5837,6 @@ snapshots:
       ansi-styles: 3.2.1
       escape-string-regexp: 1.0.5
       supports-color: 5.5.0
-
-  chalk@3.0.0:
-    dependencies:
-      ansi-styles: 4.3.0
-      supports-color: 7.2.0
 
   chalk@4.1.2:
     dependencies:
